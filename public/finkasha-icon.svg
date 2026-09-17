@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="fk-icon-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D09C" />
+      <stop offset="100%" stop-color="#06B6D4" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="#070B14" />
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="#0C1527" stroke="url(#fk-icon-grad)" stroke-width="2" />
+  <!-- Dynamic F Monogram & Upward Growth bars -->
+  <rect x="16" y="16" width="6" height="32" rx="3" fill="url(#fk-icon-grad)" />
+  <path d="M22 19H44C45.6569 19 47 20.3431 47 22C47 23.6569 45.6569 25 44 25H22V19Z" fill="url(#fk-icon-grad)" />
+  <path d="M22 30H37C38.6569 30 40 31.3431 40 33C40 34.6569 38.6569 36 37 36H22V30Z" fill="url(#fk-icon-grad)" />
+  <circle cx="48" cy="16" r="4" fill="#00D09C" />
+</svg>

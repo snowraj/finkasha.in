@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 60" fill="none">
+  <defs>
+    <linearGradient id="fk-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D09C" />
+      <stop offset="100%" stop-color="#06B6D4" />
+    </linearGradient>
+    <linearGradient id="bar-grad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#00D09C" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#00D09C" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Emblem: Ascending Wealth Hexagon & F Monogram -->
+  <g transform="translate(6, 6)">
+    <rect x="0" y="0" width="48" height="48" rx="12" fill="#0D172A" stroke="url(#fk-grad)" stroke-width="1.5" />
+    <!-- Dynamic financial growth bars forming F -->
+    <rect x="12" y="14" width="4" height="20" rx="2" fill="url(#fk-grad)" />
+    <path d="M16 16H34C35.1 16 36 16.9 36 18C36 19.1 35.1 20 34 20H16V16Z" fill="url(#fk-grad)" />
+    <path d="M16 24H28C29.1 24 30 24.9 30 26C30 27.1 29.1 28 28 28H16V24Z" fill="url(#fk-grad)" />
+    <!-- Upward Trend Accent Dot -->
+    <circle cx="36" cy="14" r="3" fill="#00D09C" />
+  </g>
+
+  <!-- Typographic Wordmark -->
+  <text x="66" y="33" fill="#FFFFFF" font-family="'Plus Jakarta Sans', sans-serif" font-size="22" font-weight="800" letter-spacing="0.08em">FINKASHA</text>
+  <text x="67" y="47" fill="#00D09C" font-family="'Inter', sans-serif" font-size="8.5" font-weight="600" letter-spacing="0.18em">INSTITUTIONAL FINANCIAL INTELLIGENCE</text>
+</svg>
