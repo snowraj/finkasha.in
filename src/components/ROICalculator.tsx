@@ -11,7 +11,7 @@ export default function ROICalculator({ onOpenBooking }: ROICalculatorProps) {
     {
       title: 'Traditional CA / Bookkeeper',
       badge: 'Retrospective Compliance',
-      cost: '₹25,000 – ₹50,000 / month',
+      cost: 'Variable by scope & engagement',
       focus: 'Past-Focused (Looking in Rearview Mirror)',
       features: [
         'Routine GST, TDS & Income Tax Filings',
@@ -28,7 +28,7 @@ export default function ROICalculator({ onOpenBooking }: ROICalculatorProps) {
     {
       title: 'Finkasha Fractional CFO',
       badge: '⭐ Institutional ROI Champion',
-      cost: '₹95,000 – ₹2,50,000 / month',
+      cost: 'Custom Pricing — Tailored to Your Enterprise',
       focus: 'Forward-Looking (Strategic Growth & Profitability)',
       features: [
         'Weekly & 13-Week Rolling Cash Flow Models',
@@ -45,7 +45,7 @@ export default function ROICalculator({ onOpenBooking }: ROICalculatorProps) {
     {
       title: 'Full-Time In-House Tier-1 CFO',
       badge: 'High Enterprise Overhead',
-      cost: '₹60 Lakh – ₹1.2 Crore / year',
+      cost: 'High Fixed Cost — Regardless of Business Scale',
       focus: 'High Fixed Cost Burden',
       features: [
         'Full-time physical presence in office',
@@ -137,13 +137,21 @@ export default function ROICalculator({ onOpenBooking }: ROICalculatorProps) {
 
                 <div
                   style={{
-                    fontSize: '1.25rem',
-                    fontWeight: 800,
-                    color: tier.highlight ? '#003366' : '#334155',
+                    fontSize: tier.highlight ? '1rem' : '0.9rem',
+                    fontWeight: tier.highlight ? 800 : 600,
+                    color: tier.highlight ? '#003366' : '#64748B',
                     marginBottom: '12px',
                     fontFamily: 'var(--font-heading)',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '8px',
+                    background: tier.highlight ? '#E6F0FA' : '#F1F5F9',
+                    border: `1px solid ${tier.highlight ? '#BFDBFE' : '#E2E8F0'}`,
+                    borderRadius: '8px',
+                    padding: '8px 14px',
                   }}
                 >
+                  {tier.highlight && <span style={{ fontSize: '0.9rem' }}>💼</span>}
                   {tier.cost}
                 </div>
 
