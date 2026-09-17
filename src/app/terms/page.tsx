@@ -49,7 +49,7 @@ export default function TermsPage() {
           <p style={{ color: '#475569', fontSize: '1rem', lineHeight: '1.6' }}>
             <strong>Finkasha Services Private Limited</strong> (Brand: <em>Finkasha</em>)
             <br />
-            AMFI Registered Mutual Fund Distributor: <strong>ARN-336498</strong>
+            Financial Management Consultancy
             <br />
             Registered Office: Office 501, A-wing, Mahalaxmi New Castle, Opp. Shri Krishna Lawns, Ayodhya Nagar, Nashik Pune Road, Nashik, Maharashtra 422101
             <br />
@@ -106,10 +106,10 @@ export default function TermsPage() {
                 <strong>Paid Strategic Financial Consultations:</strong> Direct 1-on-1 strategic advisory sessions provided to business owners, enterprise founders, practicing Chartered Accountants (CAs), and existing corporate CFOs seeking high-level diagnostic second opinions, restructuring roadmaps, or working capital reviews.
               </li>
               <li>
-                <strong>Strategic Investment Advisory:</strong> Distribution and advisory of comprehensive mutual fund portfolios, shares, and capital securities under AMFI ARN-336498, risk audits, and corporate treasury planning.
+                <strong>Financial Planning & MIS Reporting:</strong> Monthly Executive MIS cockpits, P&L dashboards, annual budgeting, variance analysis, KPI reporting frameworks, and board-ready financial packs for enterprise leadership.
               </li>
               <li>
-                <strong>Founder Wealth Management:</strong> Personal and promoter net worth analysis, diversified asset allocation, wealth accumulation, and intergenerational capital preservation.
+                <strong>Compliance & Business Finance Advisory:</strong> Proactive structuring advice on GST, TDS, statutory compliance, bank credit limit optimization, business expansion planning, capex feasibility, and cost rationalization.
               </li>
             </ul>
           </section>
@@ -213,7 +213,7 @@ export default function TermsPage() {
               8. Limitation of Liability & Market Risk
             </h2>
             <p>
-              Strategic financial forecasting and investment advisory involve macroeconomic variables, market fluctuations, and commercial risks beyond human control. Finkasha provides professional managerial guidance based on historical performance and prudent analytical standards. In no event shall Finkasha, its directors, or its consultants be liable for indirect, consequential, punitive, or loss-of-profit damages arising out of commercial decisions executed by the Client. Finkasha&apos;s aggregate liability under any engagement shall be limited to the professional advisory fee received for that specific service.
+              Strategic financial planning and management consultancy involve macroeconomic variables, commercial dynamics, and operational risks beyond human control. Finkasha provides professional managerial guidance based on historical performance and prudent analytical standards. In no event shall Finkasha, its directors, or its consultants be liable for indirect, consequential, punitive, or loss-of-profit damages arising out of commercial decisions executed by the Client. Finkasha&apos;s aggregate liability under any engagement shall be limited to the professional advisory fee received for that specific service.
             </p>
           </section>
 
@@ -242,7 +242,6 @@ export default function TermsPage() {
             <p>For any queries regarding these Terms & Conditions or to execute a corporate NDA:</p>
             <div style={{ marginTop: '12px', display: 'flex', flexDirection: 'column', gap: '6px', fontSize: '0.92rem' }}>
               <div><strong>Entity:</strong> Finkasha Services Private Limited</div>
-              <div><strong>AMFI Regn:</strong> ARN-336498</div>
               <div><strong>Attn:</strong> Kamlesh Thakur (Founder / Director)</div>
               <div><strong>Office:</strong> Office 501, A-wing, Mahalaxmi New Castle, Opp. Shri Krishna Lawns, Ayodhya Nagar, Nashik Pune Road, Nashik, Maharashtra 422101</div>
               <div><strong>Email:</strong> <a href="mailto:kamlesh@finkasha.com" style={{ color: '#005BB5' }}>kamlesh@finkasha.com</a> / <a href="mailto:contact@finkasha.com" style={{ color: '#005BB5' }}>contact@finkasha.com</a></div>

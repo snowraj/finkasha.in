@@ -45,7 +45,7 @@ export default function Header({ onOpenBooking }: HeaderProps) {
           <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
             <span>🏢 <strong>Finkasha Services Private Limited</strong></span>
             <span style={{ color: '#93C5FD' }}>|</span>
-            <span style={{ color: '#93C5FD', fontWeight: 600 }}>AMFI Registered ARN-336498</span>
+            <span style={{ color: '#93C5FD', fontWeight: 600 }}>Financial Management Consultancy</span>
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>

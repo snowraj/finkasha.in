@@ -72,45 +72,47 @@ export default function ServicesPage() {
       deliverables: [
         'Advanced financial modeling and forecasting toolkits',
         'Complex scenario analysis (inflation, supply chain shocks, currency volatility)',
-        'Strategic second opinions on large-scale bank facilities and loan restructuring',
+        'Strategic second opinions on business expansion, capital structuring, and cost optimization',
         'Assistance in presenting institutional-grade decks to banks, boards, and investors',
       ],
-      forWhom: 'Corporate CFOs and Chartered Accountants managing fast-growing mid-market portfolios.',
+      forWhom: 'Corporate CFOs and Chartered Accountants managing fast-growing mid-market enterprises.',
     },
     {
-      id: 'investments',
-      badge: 'Capital Intelligence',
-      title: 'Strategic Investment & Securities Advisory',
-      subtitle: 'Comprehensive Mutual Fund, Equity, and Capital Securities Portfolios.',
+      id: 'financial-planning',
+      badge: 'Intelligence & Reporting',
+      title: 'Financial Planning & MIS Reporting',
+      subtitle: 'Build real-time decision-making intelligence for your leadership team.',
       description:
-        'Deploy idle corporate reserves and promoter liquidity into institutional-grade, risk-mitigated investment architectures tailored to long-term enterprise horizons.',
+        'Equip your management with forward-looking financial dashboards, budgeting frameworks, and granular P&L visibility that drive confident, data-backed decisions at every level.',
       deliverables: [
-        'Corporate treasury surplus optimization (arbitrage, liquid & short-duration funds)',
-        'Comprehensive mutual fund & direct equity portfolio audits',
-        'Capital risk audits and macroeconomic vulnerability assessments',
-        'Tax-efficient return structuring aligned with Indian corporate finance laws',
+        'Monthly Executive MIS cockpits with gross margin & EBITDA analysis',
+        'Product-wise and segment-wise profitability dashboards',
+        'Annual budgeting, quarterly variance analysis & dynamic reforecasting',
+        'KPI dashboards, management reporting, and board-ready financial packs',
+        'Cost-center accounting setup and overhead allocation frameworks',
       ],
-      forWhom: 'Enterprises and promoters seeking institutional treasury management and disciplined capital growth.',
+      forWhom: 'Founders, MDs, and finance teams seeking real-time visibility and structured financial reporting.',
     },
     {
-      id: 'wealth-management',
-      badge: 'Founder Wealth Architecture',
-      title: 'Founder Wealth Management & Preservation',
-      subtitle: 'Insulate, grow, and preserve intergenerational wealth for enterprise founders.',
+      id: 'compliance-advisory',
+      badge: 'Compliance & Structuring',
+      title: 'Compliance & Business Finance Advisory',
+      subtitle: 'Strategic guidance on regulatory compliance, business structuring, and capital decisions.',
       description:
-        'A founder’s personal net worth must not remain hostage to operational enterprise risks. We establish clear firewalls and diversified wealth accumulation engines.',
+        'Navigate India\'s regulatory landscape with confidence. We provide proactive structuring advice on GST, TDS, working capital limits, and business expansion to minimize risk and maximize efficiency.',
       deliverables: [
-        'Holistic promoter net worth analysis and liquidity mapping',
-        'Multi-asset class diversified allocation (equity, fixed income, real estate, gold)',
-        'Estate and succession structuring advisory for business continuity',
-        'Risk insulation safeguarding personal assets from commercial liabilities',
+        'GST, TDS & statutory compliance structuring and calendar management',
+        'Bank CC/OD limit optimization, interest cost reduction advisory',
+        'Business expansion, capex feasibility, and scenario analysis',
+        'Pricing strategy, vendor terms optimization & cost rationalization',
+        'Commercial contract reviews and risk-weighted financial structuring',
       ],
-      forWhom: 'Enterprise founders, promoters, and director families generating ₹5 Cr – ₹50 Cr+ revenue.',
+      forWhom: 'Enterprises seeking proactive compliance management and strategic capital structuring guidance.',
     },
   ];
 
   return (
-    <div style={{ backgroundColor: '#070B14', minHeight: '100vh', padding: '60px 0 100px 0' }}>
+    <div style={{ backgroundColor: '#ffffff', minHeight: '100vh', padding: '60px 0 100px 0' }}>
       <div className="container">
         {/* Navigation Breadcrumb */}
         <div style={{ marginBottom: '32px' }}>
@@ -139,7 +141,7 @@ export default function ServicesPage() {
             <span className="text-gradient">₹5 Cr – ₹50 Cr+ Enterprises</span>
           </h1>
           <p className="section-subtitle">
-            From fractional executive CFO leadership and working capital optimization to promoter wealth preservation, discover our institutional suites designed to fuel sustainable growth.
+            From fractional executive CFO leadership and working capital optimization to financial planning and compliance advisory, discover our institutional suites designed to fuel sustainable growth.
           </p>
         </div>
 

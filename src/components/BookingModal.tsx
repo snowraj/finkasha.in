@@ -241,9 +241,9 @@ export default function BookingModal({
                           desc: 'In-depth diagnostic audit & second opinion for Business Owners, CFOs, and practicing CAs.',
                         },
                         {
-                          id: 'Founder Wealth & Investment Advisory',
-                          title: 'Founder Wealth Management & Securities Portfolio',
-                          desc: 'Comprehensive mutual fund, equity portfolio audits, and long-term asset preservation.',
+                          id: 'Financial Planning & MIS Advisory',
+                          title: 'Financial Planning & MIS Reporting',
+                          desc: 'Monthly MIS dashboards, P&L visibility, budgeting, variance analysis, and KPI frameworks.',
                         },
                       ].map((item) => (
                         <div

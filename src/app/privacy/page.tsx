@@ -49,7 +49,7 @@ export default function PrivacyPage() {
           <p style={{ color: '#475569', fontSize: '1rem', lineHeight: '1.6' }}>
             <strong>Finkasha Services Private Limited</strong> (Brand: <em>Finkasha</em>)
             <br />
-            AMFI Registered Mutual Fund Distributor: <strong>ARN-336498</strong>
+            Financial Management Consultancy
             <br />
             Office 501, A-wing, Mahalaxmi New Castle, Opp. Shri Krishna Lawns, Ayodhya Nagar, Nashik Pune Road, Nashik, Maharashtra 422101
             <br />
@@ -133,7 +133,7 @@ export default function PrivacyPage() {
               >
                 <strong style={{ color: '#003366' }}>C. Deep Advisory Financial Records (Under NDA):</strong>
                 <p style={{ fontSize: '0.9rem', color: '#475569', marginTop: '4px' }}>
-                  For paid consultations and Virtual CFO retainers: Profit & Loss statements, balance sheets, trial balances, banking credit facilities, mutual fund and equity investment holdings, and tax audit records provided under formal engagement agreements.
+                  For paid consultations and Virtual CFO retainers: Profit & Loss statements, balance sheets, trial balances, banking credit facilities, working capital schedules, and tax audit records provided under formal engagement agreements.
                 </p>
               </div>
 
@@ -165,7 +165,7 @@ export default function PrivacyPage() {
               <li>Scheduling, coordinating, and delivering paid strategic financial consultations.</li>
               <li>Performing quantitative cash leakage diagnostics and working capital optimization analyses.</li>
               <li>Executing Fractional CFO retainers, cash flow forecasting, and monthly MIS dashboard generation.</li>
-              <li>Structuring customized mutual fund, securities, and wealth preservation portfolios for promoters.</li>
+              <li>Delivering financial planning, MIS reporting, budgeting, and compliance advisory engagements.</li>
               <li>Fulfilling legal obligations under Indian tax, corporate, and digital data protection statutes.</li>
             </ul>
           </section>

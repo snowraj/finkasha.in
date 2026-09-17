@@ -17,7 +17,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.finkasha.in'),
-  title: 'Finkasha | Fractional CFO & Financial Advisory for ₹5 Cr – ₹50 Cr+ Enterprises',
+  title: 'Finkasha | Fractional CFO & Financial Management Consultancy for ₹5 Cr – ₹50 Cr+ Enterprises',
   description:
     'Finkasha Services Private Limited empowers middle-market founders, CEOs, and CAs to plug cash leakage, master cash flow forecasting, and build predictable profitability with institutional Fractional CFO leadership.',
   keywords: [
@@ -29,8 +29,8 @@ export const metadata: Metadata = {
     'Working Capital Management',
     'CFO for Manufacturing',
     'CFO for Trading',
-    'Promoter Wealth Management',
-    'Financial Advisory for ₹20 Cr - ₹50 Cr',
+    'Financial Management Consultancy',
+    'Business Finance Advisory for ₹20 Cr - ₹50 Cr',
   ],
   authors: [{ name: 'Kamlesh Thakur', url: 'https://www.finkasha.in' }],
   icons: {

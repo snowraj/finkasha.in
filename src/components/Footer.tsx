@@ -64,7 +64,7 @@ export default function Footer({ onOpenBooking }: FooterProps) {
             </div>
 
             <p style={{ color: '#CBD5E1', fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '16px' }}>
-              AMFI Registered Mutual Fund Distributor (ARN-336498). Empowering ₹5 Cr – ₹50 Cr+ enterprises and founders across Manufacturing, Trading, and Services with Fractional CFO leadership, working capital optimization, and institutional wealth management.
+              Empowering ₹5 Cr – ₹50 Cr+ enterprises and founders across Manufacturing, Trading, and Services with Fractional CFO leadership, working capital optimization, and institutional financial management consultancy.
             </p>
 
             <div style={{ display: 'flex', gap: '8px', alignItems: 'center', flexWrap: 'wrap' }}>
@@ -72,7 +72,7 @@ export default function Footer({ onOpenBooking }: FooterProps) {
                 40+ Corporate Transformations
               </span>
               <span style={{ fontSize: '0.75rem', background: 'rgba(255, 255, 255, 0.1)', color: '#93C5FD', padding: '4px 10px', borderRadius: '4px', border: '1px solid rgba(255, 255, 255, 0.15)' }}>
-                350+ Portfolios
+                350+ Enterprises Served
               </span>
             </div>
           </div>
@@ -104,13 +104,13 @@ export default function Footer({ onOpenBooking }: FooterProps) {
                 </Link>
               </li>
               <li>
-                <Link href="/services#investments" style={{ color: '#CBD5E1' }} className="footer-link">
-                  Mutual Funds & Securities (ARN-336498)
+                <Link href="/services#financial-planning" style={{ color: '#CBD5E1' }} className="footer-link">
+                  Financial Planning & MIS
                 </Link>
               </li>
               <li>
-                <Link href="/services#wealth-management" style={{ color: '#CBD5E1' }} className="footer-link">
-                  Founder Wealth Preservation
+                <Link href="/services#compliance-advisory" style={{ color: '#CBD5E1' }} className="footer-link">
+                  Compliance & Business Advisory
                 </Link>
               </li>
             </ul>
@@ -201,7 +201,7 @@ export default function Footer({ onOpenBooking }: FooterProps) {
             lineHeight: '1.6',
           }}
         >
-          <strong style={{ color: '#CBD5E1' }}>Regulatory & Advisory Disclaimer:</strong> Finkasha Services Private Limited is an AMFI Registered Mutual Fund Distributor (ARN-336498) and provides fractional CFO advisory, managerial strategic financial consulting, working capital diagnostics, and wealth allocation planning. Finkasha does not perform statutory audit or issue audit certificates required under the Companies Act 2013 or Income Tax Act 1961, which remain the responsibility of independent statutory auditors. All corporate consultations, turnover figures, and client disclosures are governed by strict confidentiality and non-disclosure standards.
+          <strong style={{ color: '#CBD5E1' }}>Regulatory & Advisory Disclaimer:</strong> Finkasha Services Private Limited provides fractional CFO advisory, managerial strategic financial consulting, working capital diagnostics, financial planning, and compliance advisory services. Finkasha does not perform statutory audit or issue audit certificates required under the Companies Act 2013 or Income Tax Act 1961, which remain the responsibility of independent statutory auditors. All corporate consultations, turnover figures, and client disclosures are governed by strict confidentiality and non-disclosure standards.
         </div>
 
         {/* Copyright */}

@@ -29,9 +29,9 @@ export default function TransformationMatrix({ onOpenBooking }: TransformationMa
       after: 'Proactive tax structuring, zero-delay statutory calendar, and institutional compliance reviews.',
     },
     {
-      domain: 'Promoter Wealth Integration',
-      before: 'Business wealth entangled with personal finances; lack of structured asset allocation and portfolio risk audits.',
-      after: 'Clear firewall between enterprise treasury and personal wealth with institutional mutual fund & equity allocation.',
+      domain: 'Strategic Financial Planning',
+      before: 'No structured financial plan or forward-looking budgets; decisions driven by gut feel with no scenario analysis or quantified downside.',
+      after: 'Dynamic annual budgets, quarterly reforecasts, and scenario models that allow leadership to make confident, data-backed decisions.',
     },
   ];
 

@@ -75,7 +75,7 @@ export default function Home() {
               lineHeight: 1.65,
             }}
           >
-            Finkasha empowers middle-market founders, existing CFOs, and CAs across Manufacturing, Trading, and Services with institutional-grade <strong style={{ color: '#003366' }}>Fractional CFO leadership</strong>, working capital optimization, and founder wealth management.
+            Finkasha empowers middle-market founders, existing CFOs, and CAs across Manufacturing, Trading, and Services with institutional-grade <strong style={{ color: '#003366' }}>Fractional CFO leadership</strong>, working capital optimization, and predictable profitability architecture.
           </p>
 
           {/* Dual Action CTAs */}
@@ -135,7 +135,7 @@ export default function Home() {
                 350+
               </div>
               <div style={{ fontSize: '0.8rem', color: '#64748B', marginTop: '2px', textTransform: 'uppercase', letterSpacing: '0.04em', fontWeight: 600 }}>
-                Portfolios Managed
+                Client Enterprises Served
               </div>
             </div>
             <div>
@@ -222,8 +222,8 @@ export default function Home() {
               },
               {
                 icon: '🛡️',
-                title: 'Unprotected Founder Wealth',
-                desc: 'Company cash flows and promoter personal wealth remain dangerously entangled. Personal assets remain exposed to enterprise volatility and credit liabilities.',
+                title: 'No Forward-Looking Financial Strategy',
+                desc: 'Without a dedicated CFO driving expansion planning, capital cost analysis, and scenario modelling, major business decisions are made purely on gut feel with no quantified downside.',
               },
             ].map((card, idx) => (
               <div key={idx} className="glass-card" style={{ padding: '30px', border: '1px solid #D9E4F0' }}>
@@ -335,7 +335,7 @@ export default function Home() {
               </button>
             </div>
 
-            {/* Offering 2: Investments */}
+            {/* Offering 2: Financial Planning & MIS */}
             <div
               className="glass-card"
               style={{
@@ -349,40 +349,40 @@ export default function Home() {
               <div>
                 <div className="badge" style={{ marginBottom: '14px' }}>Pillar 02</div>
                 <h3 style={{ fontSize: '1.45rem', marginBottom: '10px', color: '#003366' }}>
-                  Strategic Investment Advisory
+                  Financial Planning & MIS
                 </h3>
                 <p style={{ color: '#475569', fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '20px' }}>
-                  Institutional capital allocation for corporate reserves and long-term promoter growth (AMFI ARN-336498).
+                  Build real-time decision-making intelligence for your leadership team.
                 </p>
                 <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '0.88rem', color: '#0F172A', marginBottom: '28px' }}>
                   <li style={{ display: 'flex', gap: '8px' }}>
                     <span style={{ color: '#005BB5', fontWeight: 700 }}>✓</span>
-                    <span>Comprehensive Mutual Fund & Equity Portfolios</span>
+                    <span>Monthly Executive MIS & gross margin dashboards</span>
                   </li>
                   <li style={{ display: 'flex', gap: '8px' }}>
                     <span style={{ color: '#005BB5', fontWeight: 700 }}>✓</span>
-                    <span>Corporate treasury & liquidity yield maximization</span>
+                    <span>Product-wise & segment-wise P&L visibility</span>
                   </li>
                   <li style={{ display: 'flex', gap: '8px' }}>
                     <span style={{ color: '#005BB5', fontWeight: 700 }}>✓</span>
-                    <span>In-depth portfolio risk & capital volatility audits</span>
+                    <span>Annual budgeting, variance analysis & reforecasting</span>
                   </li>
                   <li style={{ display: 'flex', gap: '8px' }}>
                     <span style={{ color: '#005BB5', fontWeight: 700 }}>✓</span>
-                    <span>Tax-efficient capital gains structuring</span>
+                    <span>KPI dashboards & management reporting frameworks</span>
                   </li>
                 </ul>
               </div>
               <button
-                onClick={() => openBooking('₹20 Cr - ₹50 Cr', 'Strategic Investment Advisory')}
+                onClick={() => openBooking('₹20 Cr - ₹50 Cr', 'Financial Planning & MIS Advisory')}
                 className="btn btn-secondary"
                 style={{ width: '100%' }}
               >
-                Explore Investment Advisory
+                Explore Financial Planning
               </button>
             </div>
 
-            {/* Offering 3: Wealth Management */}
+            {/* Offering 3: Compliance & Strategic Advisory */}
             <div
               className="glass-card"
               style={{
@@ -396,36 +396,36 @@ export default function Home() {
               <div>
                 <div className="badge" style={{ marginBottom: '14px' }}>Pillar 03</div>
                 <h3 style={{ fontSize: '1.45rem', marginBottom: '10px', color: '#003366' }}>
-                  Founder Wealth Management
+                  Compliance & Business Finance Advisory
                 </h3>
                 <p style={{ color: '#475569', fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '20px' }}>
-                  Safeguarding and compounding promoter family net worth across generations.
+                  Strategic guidance on regulatory compliance, business structuring, and capital decisions.
                 </p>
                 <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '0.88rem', color: '#0F172A', marginBottom: '28px' }}>
                   <li style={{ display: 'flex', gap: '8px' }}>
                     <span style={{ color: '#005BB5', fontWeight: 700 }}>✓</span>
-                    <span>Holistic promoter net worth analysis & mapping</span>
+                    <span>GST, TDS & statutory compliance structuring</span>
                   </li>
                   <li style={{ display: 'flex', gap: '8px' }}>
                     <span style={{ color: '#005BB5', fontWeight: 700 }}>✓</span>
-                    <span>Multi-asset class allocation & capital preservation</span>
+                    <span>Bank CC/OD limit optimization & debt strategy</span>
                   </li>
                   <li style={{ display: 'flex', gap: '8px' }}>
                     <span style={{ color: '#005BB5', fontWeight: 700 }}>✓</span>
-                    <span>Commercial risk firewalls protecting family assets</span>
+                    <span>Business expansion & capex feasibility analysis</span>
                   </li>
                   <li style={{ display: 'flex', gap: '8px' }}>
                     <span style={{ color: '#005BB5', fontWeight: 700 }}>✓</span>
-                    <span>Long-term estate planning & succession governance</span>
+                    <span>Cost rationalization & pricing strategy advisory</span>
                   </li>
                 </ul>
               </div>
               <button
-                onClick={() => openBooking('₹20 Cr - ₹50 Cr', 'Founder Wealth Management')}
+                onClick={() => openBooking('₹20 Cr - ₹50 Cr', 'Compliance & Business Finance Advisory')}
                 className="btn btn-secondary"
                 style={{ width: '100%' }}
               >
-                Explore Wealth Management
+                Explore Business Advisory
               </button>
             </div>
           </div>
