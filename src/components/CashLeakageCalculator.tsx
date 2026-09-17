@@ -11,25 +11,12 @@ export default function CashLeakageCalculator({ onOpenBookingWithDetails }: Calc
   const [netMargin, setNetMargin] = useState<number>(8);
   const [dsoDays, setDsoDays] = useState<number>(65);
 
-  // Calculations based on middle-market enterprise dynamics
   const turnoverLakhs = turnoverCr * 100;
-  
-  // Benchmark DSO is ~40 days in healthy middle-market businesses
   const excessDsoDays = Math.max(0, dsoDays - 40);
-  
-  // Working capital trapped in excess receivables
   const trappedReceivablesLakhs = (turnoverLakhs / 365) * excessDsoDays;
-  
-  // Cost of working capital financing (CC / OD limit @ ~10.5% p.a.) + idle cash drag
   const financingCostLeakage = trappedReceivablesLakhs * 0.105;
-  
-  // Unoptimized operational cash leakage (margin slippage, procurement inefficiencies ~1.5% of turnover)
   const operationalLeakage = turnoverLakhs * 0.015;
-  
-  // Total estimated annual cash leakage
   const totalLeakageLakhs = Math.round(financingCostLeakage + operationalLeakage);
-  
-  // Estimated trapped working capital
   const totalTrappedWorkingCapital = Math.round(trappedReceivablesLakhs);
 
   const formatCurrencyLakhs = (lakhs: number) => {
@@ -52,20 +39,22 @@ export default function CashLeakageCalculator({ onOpenBookingWithDetails }: Calc
       className="glass-card"
       style={{
         padding: '48px 40px',
-        border: '1px solid rgba(0, 208, 156, 0.3)',
-        boxShadow: '0 20px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 208, 156, 0.12)',
+        backgroundColor: '#ffffff',
+        border: '2px solid #BFDBFE',
+        boxShadow: '0 10px 35px rgba(0, 51, 102, 0.08)',
+        borderRadius: '16px',
         position: 'relative',
       }}
     >
       <div style={{ textAlign: 'center', marginBottom: '36px' }}>
-        <div className="badge badge-gold" style={{ marginBottom: '12px' }}>
+        <div className="badge" style={{ marginBottom: '12px' }}>
           ⚡ Interactive Enterprise Financial Diagnostic
         </div>
-        <h3 style={{ fontSize: '2rem', marginBottom: '12px' }}>
+        <h3 style={{ fontSize: '2.1rem', marginBottom: '12px', color: '#003366' }}>
           Is Hidden Cash Leakage Silently Draining Your Enterprise?
         </h3>
-        <p style={{ color: '#94A3B8', fontSize: '1rem', maxWidth: '680px', margin: '0 auto' }}>
-          Middle-market companies generating ₹5 Cr – ₹50 Cr+ often bleed ₹20L to ₹1.5 Cr+ annually through trapped receivables, unoptimized cash conversion cycles, and unmonitored margin leakages.
+        <p style={{ color: '#475569', fontSize: '1rem', maxWidth: '680px', margin: '0 auto' }}>
+          Enterprises generating ₹5 Cr – ₹50 Cr+ often lock ₹25 Lakhs to ₹1.5 Crores in unnecessary working capital drag, debtor delays, and unmonitored margin bleed. Run your quick diagnostic below:
         </p>
       </div>
 
@@ -79,18 +68,18 @@ export default function CashLeakageCalculator({ onOpenBookingWithDetails }: Calc
         className="calc-grid"
       >
         {/* Sliders Input Column */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '28px' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '26px' }}>
           {/* Turnover Slider */}
           <div>
-            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
-              <label style={{ fontSize: '0.92rem', fontWeight: 600, color: '#E2E8F0' }}>
-                Annual Revenue / Turnover:
+            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
+              <label style={{ fontSize: '0.92rem', fontWeight: 700, color: '#003366' }}>
+                Annual Turnover / Revenue:
               </label>
               <span
                 style={{
-                  color: '#00D09C',
-                  fontSize: '1.15rem',
-                  fontWeight: 700,
+                  color: '#005BB5',
+                  fontSize: '1.25rem',
+                  fontWeight: 800,
                   fontFamily: 'var(--font-heading)',
                 }}
               >
@@ -108,11 +97,11 @@ export default function CashLeakageCalculator({ onOpenBookingWithDetails }: Calc
                 width: '100%',
                 height: '8px',
                 borderRadius: '4px',
-                accentColor: '#00D09C',
+                accentColor: '#003366',
                 cursor: 'pointer',
               }}
             />
-            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.75rem', color: '#64748B', marginTop: '4px' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.78rem', color: '#64748B', marginTop: '4px' }}>
               <span>₹5 Cr (Emerging)</span>
               <span>₹25 Cr (Middle-Market)</span>
               <span>₹50 Cr+ (Established)</span>
@@ -121,15 +110,15 @@ export default function CashLeakageCalculator({ onOpenBookingWithDetails }: Calc
 
           {/* DSO / Collection Period Slider */}
           <div>
-            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
-              <label style={{ fontSize: '0.92rem', fontWeight: 600, color: '#E2E8F0' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
+              <label style={{ fontSize: '0.92rem', fontWeight: 700, color: '#003366' }}>
                 Average Debtor Collection Cycle (DSO):
               </label>
               <span
                 style={{
-                  color: dsoDays > 60 ? '#F59E0B' : '#00D09C',
-                  fontSize: '1.15rem',
-                  fontWeight: 700,
+                  color: dsoDays > 60 ? '#D97706' : '#005BB5',
+                  fontSize: '1.25rem',
+                  fontWeight: 800,
                   fontFamily: 'var(--font-heading)',
                 }}
               >
@@ -147,11 +136,11 @@ export default function CashLeakageCalculator({ onOpenBookingWithDetails }: Calc
                 width: '100%',
                 height: '8px',
                 borderRadius: '4px',
-                accentColor: dsoDays > 60 ? '#F59E0B' : '#00D09C',
+                accentColor: dsoDays > 60 ? '#D97706' : '#003366',
                 cursor: 'pointer',
               }}
             />
-            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.75rem', color: '#64748B', marginTop: '4px' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.78rem', color: '#64748B', marginTop: '4px' }}>
               <span>30 Days (Ideal)</span>
               <span>60 Days (Typical)</span>
               <span>90+ Days (Severe Trap)</span>
@@ -160,15 +149,15 @@ export default function CashLeakageCalculator({ onOpenBookingWithDetails }: Calc
 
           {/* Net Profit Margin Slider */}
           <div>
-            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
-              <label style={{ fontSize: '0.92rem', fontWeight: 600, color: '#E2E8F0' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
+              <label style={{ fontSize: '0.92rem', fontWeight: 700, color: '#003366' }}>
                 Estimated Current Net Profit Margin:
               </label>
               <span
                 style={{
-                  color: '#38BDF8',
-                  fontSize: '1.15rem',
-                  fontWeight: 700,
+                  color: '#005BB5',
+                  fontSize: '1.25rem',
+                  fontWeight: 800,
                   fontFamily: 'var(--font-heading)',
                 }}
               >
@@ -186,11 +175,11 @@ export default function CashLeakageCalculator({ onOpenBookingWithDetails }: Calc
                 width: '100%',
                 height: '8px',
                 borderRadius: '4px',
-                accentColor: '#38BDF8',
+                accentColor: '#003366',
                 cursor: 'pointer',
               }}
             />
-            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.75rem', color: '#64748B', marginTop: '4px' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.78rem', color: '#64748B', marginTop: '4px' }}>
               <span>3% (Thin)</span>
               <span>10% (Healthy)</span>
               <span>20%+ (High Margin)</span>
@@ -198,27 +187,27 @@ export default function CashLeakageCalculator({ onOpenBookingWithDetails }: Calc
           </div>
         </div>
 
-        {/* Results & Action Card */}
+        {/* Results Card */}
         <div
           style={{
-            background: 'linear-gradient(135deg, rgba(11, 20, 38, 0.95), rgba(7, 12, 24, 0.98))',
-            border: '1px solid rgba(0, 208, 156, 0.4)',
-            borderRadius: '16px',
+            background: 'linear-gradient(135deg, #002B54 0%, #001F3D 100%)',
+            borderRadius: '14px',
             padding: '32px',
-            boxShadow: '0 10px 30px rgba(0, 0, 0, 0.4)',
+            color: '#ffffff',
+            boxShadow: '0 8px 24px rgba(0, 51, 102, 0.2)',
           }}
         >
-          <div style={{ fontSize: '0.82rem', color: '#94A3B8', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '6px' }}>
+          <div style={{ fontSize: '0.82rem', color: '#93C5FD', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 600, marginBottom: '6px' }}>
             Estimated Annual Leakage Diagnostic
           </div>
 
           <div
             style={{
-              fontSize: '2.6rem',
+              fontSize: '2.5rem',
               fontWeight: 800,
               fontFamily: 'var(--font-heading)',
-              color: '#F87171',
-              marginBottom: '18px',
+              color: '#FCA5A5',
+              marginBottom: '16px',
               display: 'flex',
               alignItems: 'baseline',
               gap: '8px',
@@ -228,18 +217,18 @@ export default function CashLeakageCalculator({ onOpenBookingWithDetails }: Calc
             <span style={{ fontSize: '0.9rem', color: '#94A3B8', fontWeight: 500 }}>/ year</span>
           </div>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '24px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '22px' }}>
             <div
               style={{
                 display: 'flex',
                 justifyContent: 'space-between',
-                padding: '10px 12px',
+                padding: '10px 14px',
                 borderRadius: '8px',
-                background: 'rgba(255, 255, 255, 0.03)',
+                background: 'rgba(255, 255, 255, 0.08)',
                 fontSize: '0.88rem',
               }}
             >
-              <span style={{ color: '#94A3B8' }}>Trapped Working Capital:</span>
+              <span style={{ color: '#CBD5E1' }}>Trapped Working Capital:</span>
               <strong style={{ color: '#fff' }}>{formatCurrencyLakhs(totalTrappedWorkingCapital)}</strong>
             </div>
 
@@ -247,29 +236,29 @@ export default function CashLeakageCalculator({ onOpenBookingWithDetails }: Calc
               style={{
                 display: 'flex',
                 justifyContent: 'space-between',
-                padding: '10px 12px',
+                padding: '10px 14px',
                 borderRadius: '8px',
-                background: 'rgba(255, 255, 255, 0.03)',
+                background: 'rgba(255, 255, 255, 0.08)',
                 fontSize: '0.88rem',
               }}
             >
-              <span style={{ color: '#94A3B8' }}>Financing Cost Drag:</span>
-              <strong style={{ color: '#FBBF24' }}>~{formatCurrencyLakhs(Math.round(financingCostLeakage))}/yr</strong>
+              <span style={{ color: '#CBD5E1' }}>Financing Cost Drag:</span>
+              <strong style={{ color: '#FCD34D' }}>~{formatCurrencyLakhs(Math.round(financingCostLeakage))}/yr</strong>
             </div>
 
             <div
               style={{
                 display: 'flex',
                 justifyContent: 'space-between',
-                padding: '10px 12px',
+                padding: '10px 14px',
                 borderRadius: '8px',
-                background: 'rgba(0, 208, 156, 0.08)',
-                border: '1px solid rgba(0, 208, 156, 0.2)',
+                background: 'rgba(0, 124, 232, 0.25)',
+                border: '1px solid rgba(147, 197, 253, 0.3)',
                 fontSize: '0.88rem',
               }}
             >
-              <span style={{ color: '#00D09C', fontWeight: 600 }}>Finkasha Recoverable Profit:</span>
-              <strong style={{ color: '#00D09C', fontWeight: 700 }}>
+              <span style={{ color: '#93C5FD', fontWeight: 600 }}>Finkasha Recoverable Profit:</span>
+              <strong style={{ color: '#6EE7B7', fontWeight: 700 }}>
                 +{formatCurrencyLakhs(Math.round(totalLeakageLakhs * 0.75))}
               </strong>
             </div>
@@ -277,8 +266,16 @@ export default function CashLeakageCalculator({ onOpenBookingWithDetails }: Calc
 
           <button
             onClick={handleClaimAudit}
-            className="btn btn-primary"
-            style={{ width: '100%', padding: '16px', fontSize: '1rem', fontWeight: 700 }}
+            className="btn btn-secondary"
+            style={{
+              width: '100%',
+              padding: '15px',
+              fontSize: '0.98rem',
+              fontWeight: 700,
+              backgroundColor: '#FFFFFF',
+              color: '#003366',
+              border: 'none',
+            }}
           >
             <span>Claim Your Full Diagnostic Audit</span>
             <span>⚡</span>
@@ -288,15 +285,11 @@ export default function CashLeakageCalculator({ onOpenBookingWithDetails }: Calc
             style={{
               textAlign: 'center',
               marginTop: '12px',
-              fontSize: '0.76rem',
-              color: '#64748B',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: '6px',
+              fontSize: '0.75rem',
+              color: '#94A3B8',
             }}
           >
-            <span>🔒 Confidential & Protected by Bilateral NDA</span>
+            🔒 Protected by Bilateral Non-Disclosure Agreement (NDA)
           </div>
         </div>
       </div>

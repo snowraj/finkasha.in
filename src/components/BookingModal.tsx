@@ -52,7 +52,6 @@ export default function BookingModal({
     }
 
     setIsSubmitting(true);
-    // Simulate API lead dispatch and store lead locally for resilience
     setTimeout(() => {
       try {
         const storedLeads = JSON.parse(localStorage.getItem('finkasha_consultations') || '[]');
@@ -62,11 +61,11 @@ export default function BookingModal({
         });
         localStorage.setItem('finkasha_consultations', JSON.stringify(storedLeads));
       } catch {
-        // local storage fallback
+        // fallback
       }
       setIsSubmitting(false);
       setIsSuccess(true);
-    }, 700);
+    }, 600);
   };
 
   const whatsappUrl = `https://wa.me/919970208927?text=${encodeURIComponent(
@@ -86,13 +85,13 @@ export default function BookingModal({
             width: '36px',
             height: '36px',
             borderRadius: '50%',
-            background: 'rgba(255, 255, 255, 0.08)',
+            background: '#F1F5F9',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            color: '#94A3B8',
-            fontSize: '1.2rem',
-            border: '1px solid rgba(255, 255, 255, 0.1)',
+            color: '#475569',
+            fontSize: '1.1rem',
+            border: '1px solid #CBD5E1',
             cursor: 'pointer',
           }}
           aria-label="Close modal"
@@ -103,35 +102,35 @@ export default function BookingModal({
         {!isSuccess ? (
           <div>
             {/* Header */}
-            <div style={{ marginBottom: '24px' }}>
-              <div className="badge badge-gold" style={{ marginBottom: '10px' }}>
+            <div style={{ marginBottom: '22px' }}>
+              <div className="badge" style={{ marginBottom: '10px' }}>
                 ⭐ High-Clarity Consultation Booking
               </div>
-              <h3 style={{ fontSize: '1.65rem', marginBottom: '8px' }}>
+              <h3 style={{ fontSize: '1.6rem', marginBottom: '8px', color: '#003366' }}>
                 Book Your Strategic Financial Consultation
               </h3>
-              <p style={{ color: '#94A3B8', fontSize: '0.92rem', lineHeight: '1.5' }}>
-                Direct confidential strategy session with Finkasha financial leadership for enterprises generating ₹5 Cr – ₹50 Cr+ annual turnover.
+              <p style={{ color: '#64748B', fontSize: '0.92rem', lineHeight: '1.5' }}>
+                Direct confidential strategy session with Finkasha senior financial leadership for enterprises generating ₹5 Cr – ₹50 Cr+ annual turnover.
               </p>
             </div>
 
             {/* Step Progress Tracker */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '28px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '26px' }}>
               {[1, 2, 3].map((s) => (
                 <div key={s} style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '4px' }}>
                   <div
                     style={{
                       height: '4px',
                       borderRadius: '2px',
-                      backgroundColor: s <= step ? '#00D09C' : 'rgba(255, 255, 255, 0.12)',
+                      backgroundColor: s <= step ? '#003366' : '#E2E8F0',
                       transition: 'all 0.3s ease',
                     }}
                   />
                   <span
                     style={{
                       fontSize: '0.72rem',
-                      color: s === step ? '#00D09C' : '#64748B',
-                      fontWeight: 600,
+                      color: s === step ? '#003366' : '#94A3B8',
+                      fontWeight: 700,
                       textTransform: 'uppercase',
                     }}
                   >
@@ -252,12 +251,12 @@ export default function BookingModal({
                           onClick={() => setFormData({ ...formData, primaryGoal: item.id })}
                           style={{
                             padding: '14px 16px',
-                            borderRadius: '12px',
-                            border: `1px solid ${
-                              formData.primaryGoal === item.id ? '#00D09C' : 'rgba(148, 163, 184, 0.15)'
+                            borderRadius: '10px',
+                            border: `1.5px solid ${
+                              formData.primaryGoal === item.id ? '#003366' : '#CBD5E1'
                             }`,
                             backgroundColor:
-                              formData.primaryGoal === item.id ? 'rgba(0, 208, 156, 0.08)' : 'rgba(255, 255, 255, 0.02)',
+                              formData.primaryGoal === item.id ? '#EBF3FA' : '#ffffff',
                             cursor: 'pointer',
                             transition: 'all 0.2s ease',
                           }}
@@ -268,19 +267,19 @@ export default function BookingModal({
                                 width: '16px',
                                 height: '16px',
                                 borderRadius: '50%',
-                                border: `2px solid ${formData.primaryGoal === item.id ? '#00D09C' : '#64748B'}`,
+                                border: `2px solid ${formData.primaryGoal === item.id ? '#003366' : '#94A3B8'}`,
                                 display: 'flex',
                                 alignItems: 'center',
                                 justifyContent: 'center',
                               }}
                             >
                               {formData.primaryGoal === item.id && (
-                                <div style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#00D09C' }} />
+                                <div style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#003366' }} />
                               )}
                             </div>
-                            <span style={{ fontWeight: 600, color: '#fff', fontSize: '0.95rem' }}>{item.title}</span>
+                            <span style={{ fontWeight: 700, color: '#003366', fontSize: '0.95rem' }}>{item.title}</span>
                           </div>
-                          <p style={{ fontSize: '0.82rem', color: '#94A3B8', paddingLeft: '26px' }}>{item.desc}</p>
+                          <p style={{ fontSize: '0.84rem', color: '#475569', paddingLeft: '26px' }}>{item.desc}</p>
                         </div>
                       ))}
                     </div>
@@ -339,11 +338,11 @@ export default function BookingModal({
                   </div>
 
                   <div className="form-group">
-                    <label className="form-label">Specific Note / Current Bottleneck (Optional)</label>
+                    <label className="form-label">Specific Note / Bottleneck (Optional)</label>
                     <textarea
                       className="form-textarea"
                       rows={3}
-                      placeholder="e.g. Unpredictable operating cash flow, inventory delay, preparing for debt refinancing..."
+                      placeholder="e.g. Unpredictable operating cash flow, debtor delay, debt refinancing..."
                       value={formData.notes}
                       onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
                     />
@@ -351,12 +350,12 @@ export default function BookingModal({
 
                   <div
                     style={{
-                      background: 'rgba(0, 208, 156, 0.06)',
-                      border: '1px solid rgba(0, 208, 156, 0.2)',
+                      background: '#F0F5FB',
+                      border: '1px solid #BFDBFE',
                       padding: '12px 14px',
-                      borderRadius: '10px',
+                      borderRadius: '8px',
                       fontSize: '0.8rem',
-                      color: '#94A3B8',
+                      color: '#334155',
                       marginBottom: '20px',
                       display: 'flex',
                       gap: '10px',
@@ -386,47 +385,49 @@ export default function BookingModal({
           <div style={{ textAlign: 'center', padding: '20px 0', animation: 'fadeIn 0.3s ease' }}>
             <div
               style={{
-                width: '64px',
-                height: '64px',
+                width: '60px',
+                height: '60px',
                 borderRadius: '50%',
-                backgroundColor: 'rgba(0, 208, 156, 0.15)',
-                border: '2px solid #00D09C',
+                backgroundColor: '#EBF3FA',
+                border: '2px solid #003366',
+                color: '#003366',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                margin: '0 auto 20px auto',
+                margin: '0 auto 16px auto',
                 fontSize: '1.8rem',
+                fontWeight: 800,
               }}
             >
               ✓
             </div>
-            <h3 style={{ fontSize: '1.75rem', marginBottom: '10px' }}>Consultation Request Received</h3>
-            <p style={{ color: '#94A3B8', fontSize: '0.95rem', lineHeight: '1.6', maxWidth: '460px', margin: '0 auto 24px auto' }}>
+            <h3 style={{ fontSize: '1.75rem', marginBottom: '8px', color: '#003366' }}>Consultation Request Received</h3>
+            <p style={{ color: '#475569', fontSize: '0.95rem', lineHeight: '1.6', maxWidth: '460px', margin: '0 auto 20px auto' }}>
               Thank you, <strong>{formData.fullName}</strong>. Our senior financial advisory desk has prioritized your request for <strong>{formData.companyName}</strong>.
             </p>
 
             <div
               style={{
-                backgroundColor: 'rgba(255, 255, 255, 0.03)',
-                border: '1px solid rgba(148, 163, 184, 0.15)',
-                borderRadius: '12px',
+                backgroundColor: '#F8FAFC',
+                border: '1px solid #CBD5E1',
+                borderRadius: '10px',
                 padding: '16px',
                 textAlign: 'left',
-                marginBottom: '24px',
+                marginBottom: '22px',
                 fontSize: '0.85rem',
               }}
             >
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
                 <span style={{ color: '#64748B' }}>Turnover Bracket:</span>
-                <span style={{ color: '#fff', fontWeight: 600 }}>{formData.turnover}</span>
+                <span style={{ color: '#003366', fontWeight: 700 }}>{formData.turnover}</span>
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
                 <span style={{ color: '#64748B' }}>Domain:</span>
-                <span style={{ color: '#fff', fontWeight: 600 }}>{formData.industry}</span>
+                <span style={{ color: '#003366', fontWeight: 700 }}>{formData.industry}</span>
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <span style={{ color: '#64748B' }}>Primary Objective:</span>
-                <span style={{ color: '#00D09C', fontWeight: 600 }}>{formData.primaryGoal}</span>
+                <span style={{ color: '#005BB5', fontWeight: 700 }}>{formData.primaryGoal}</span>
               </div>
             </div>
 

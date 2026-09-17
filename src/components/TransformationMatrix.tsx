@@ -36,27 +36,27 @@ export default function TransformationMatrix({ onOpenBooking }: TransformationMa
   ];
 
   return (
-    <section id="transformation" className="section" style={{ position: 'relative' }}>
+    <section id="transformation" className="section" style={{ backgroundColor: '#F8FAFC' }}>
       <div className="container">
         <div className="section-title-wrap">
           <div className="badge badge-gold">The Transformation Matrix</div>
           <h2 className="section-title">
-            The Difference Between <span style={{ color: '#F87171' }}>Financial Anxiety</span> and{' '}
-            <span className="text-gradient">Total Clarity</span>
+            The Difference Between <span style={{ color: '#DC2626' }}>Financial Anxiety</span> and{' '}
+            <span style={{ color: '#003366' }}>Total Clarity</span>
           </h2>
           <p className="section-subtitle">
             Most ₹5 Cr – ₹50 Cr+ enterprises don&apos;t fail from lack of sales—they falter due to poor financial architecture and unmonitored cash bleed. Here is how Finkasha bridges that chasm.
           </p>
         </div>
 
-        {/* Matrix Comparison Table / Grid */}
+        {/* Matrix Comparison Table */}
         <div
           style={{
-            background: 'rgba(11, 18, 34, 0.7)',
-            border: '1px solid rgba(148, 163, 184, 0.15)',
-            borderRadius: '20px',
+            background: '#ffffff',
+            border: '1px solid #D9E4F0',
+            borderRadius: '16px',
             overflow: 'hidden',
-            boxShadow: '0 20px 50px rgba(0,0,0,0.5)',
+            boxShadow: '0 8px 30px rgba(0, 51, 102, 0.07)',
             marginBottom: '48px',
           }}
         >
@@ -65,20 +65,20 @@ export default function TransformationMatrix({ onOpenBooking }: TransformationMa
             style={{
               display: 'grid',
               gridTemplateColumns: '1.2fr 1.4fr 1.4fr',
-              background: 'rgba(255, 255, 255, 0.03)',
-              borderBottom: '1px solid rgba(148, 163, 184, 0.15)',
-              padding: '20px 28px',
+              background: '#002B54',
+              color: '#ffffff',
+              padding: '18px 28px',
               fontWeight: 700,
               fontSize: '0.92rem',
               letterSpacing: '0.04em',
             }}
             className="matrix-row matrix-header"
           >
-            <div style={{ color: '#94A3B8' }}>OPERATIONAL PILLAR</div>
-            <div style={{ color: '#F87171', display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <div style={{ color: '#93C5FD' }}>OPERATIONAL PILLAR</div>
+            <div style={{ color: '#FCA5A5', display: 'flex', alignItems: 'center', gap: '8px' }}>
               <span>✕ Traditional Reactive Accounting</span>
             </div>
-            <div style={{ color: '#00D09C', display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <div style={{ color: '#6EE7B7', display: 'flex', alignItems: 'center', gap: '8px' }}>
               <span>✓ Finkasha Virtual CFO System</span>
             </div>
           </div>
@@ -90,21 +90,21 @@ export default function TransformationMatrix({ onOpenBooking }: TransformationMa
               style={{
                 display: 'grid',
                 gridTemplateColumns: '1.2fr 1.4fr 1.4fr',
-                padding: '22px 28px',
+                padding: '20px 28px',
                 borderBottom:
-                  idx === comparisonItems.length - 1 ? 'none' : '1px solid rgba(148, 163, 184, 0.08)',
+                  idx === comparisonItems.length - 1 ? 'none' : '1px solid #E2E8F0',
                 fontSize: '0.92rem',
-                backgroundColor: idx % 2 === 0 ? 'transparent' : 'rgba(255, 255, 255, 0.015)',
+                backgroundColor: idx % 2 === 0 ? '#ffffff' : '#F0F5FB',
               }}
               className="matrix-row"
             >
-              <div style={{ fontWeight: 600, color: '#E2E8F0', display: 'flex', alignItems: 'center' }}>
+              <div style={{ fontWeight: 700, color: '#003366', display: 'flex', alignItems: 'center' }}>
                 {item.domain}
               </div>
-              <div style={{ color: '#94A3B8', paddingRight: '20px', lineHeight: '1.6' }}>
+              <div style={{ color: '#64748B', paddingRight: '20px', lineHeight: '1.6' }}>
                 {item.before}
               </div>
-              <div style={{ color: '#F8FAFC', paddingRight: '10px', lineHeight: '1.6', fontWeight: 500 }}>
+              <div style={{ color: '#0F172A', paddingRight: '10px', lineHeight: '1.6', fontWeight: 600 }}>
                 {item.after}
               </div>
             </div>
@@ -112,74 +112,75 @@ export default function TransformationMatrix({ onOpenBooking }: TransformationMa
         </div>
 
         {/* Transformation Stories / ICP Proof */}
-        <div className="grid-3" style={{ marginTop: '40px' }}>
+        <div className="grid-3">
           {/* Manufacturing Story */}
-          <div className="glass-card" style={{ padding: '28px' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '14px' }}>
+          <div className="glass-card" style={{ padding: '30px', borderTop: '4px solid #003366' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '12px' }}>
               <span className="badge" style={{ fontSize: '0.72rem' }}>Manufacturing</span>
-              <span style={{ color: '#00D09C', fontWeight: 700, fontSize: '0.85rem' }}>₹32 Cr Turnover</span>
+              <span style={{ color: '#003366', fontWeight: 700, fontSize: '0.85rem' }}>₹32 Cr Turnover</span>
             </div>
-            <h4 style={{ fontSize: '1.15rem', marginBottom: '10px', color: '#fff' }}>
+            <h4 style={{ fontSize: '1.18rem', marginBottom: '10px', color: '#003366' }}>
               Auto Component Manufacturer
             </h4>
-            <p style={{ fontSize: '0.86rem', color: '#94A3B8', lineHeight: '1.6', marginBottom: '18px' }}>
+            <p style={{ fontSize: '0.88rem', color: '#475569', lineHeight: '1.6', marginBottom: '18px' }}>
               Trapped with ₹4.2 Cr in delayed receivables and high overdraft interest. Finkasha instituted a rolling 13-week forecast, renegotiated vendor payment terms, and recovered ₹68L in working capital within 90 days.
             </p>
-            <div style={{ borderTop: '1px solid rgba(255, 255, 255, 0.06)', paddingTop: '12px', fontSize: '0.8rem', color: '#38BDF8' }}>
+            <div style={{ borderTop: '1px solid #E2E8F0', paddingTop: '12px', fontSize: '0.82rem', color: '#005BB5', fontWeight: 600 }}>
               Result: 38% reduction in financing costs + 100% on-time supplier cycles
             </div>
           </div>
 
           {/* Trading & Export Story */}
-          <div className="glass-card" style={{ padding: '28px' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '14px' }}>
+          <div className="glass-card" style={{ padding: '30px', borderTop: '4px solid #005BB5' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '12px' }}>
               <span className="badge badge-gold" style={{ fontSize: '0.72rem' }}>Trading & Export</span>
-              <span style={{ color: '#FBBF24', fontWeight: 700, fontSize: '0.85rem' }}>₹48 Cr Turnover</span>
+              <span style={{ color: '#1D4ED8', fontWeight: 700, fontSize: '0.85rem' }}>₹48 Cr Turnover</span>
             </div>
-            <h4 style={{ fontSize: '1.15rem', marginBottom: '10px', color: '#fff' }}>
+            <h4 style={{ fontSize: '1.18rem', marginBottom: '10px', color: '#003366' }}>
               Chemical Import-Exporter
             </h4>
-            <p style={{ fontSize: '0.86rem', color: '#94A3B8', lineHeight: '1.6', marginBottom: '18px' }}>
+            <p style={{ fontSize: '0.88rem', color: '#475569', lineHeight: '1.6', marginBottom: '18px' }}>
               Rapid turnover growth masked 2.8% unbilled currency & freight leakage. Finkasha installed weekly product-line margin accounting and plugged ₹52L annual margin leakage.
             </p>
-            <div style={{ borderTop: '1px solid rgba(255, 255, 255, 0.06)', paddingTop: '12px', fontSize: '0.8rem', color: '#00D09C' }}>
+            <div style={{ borderTop: '1px solid #E2E8F0', paddingTop: '12px', fontSize: '0.82rem', color: '#005BB5', fontWeight: 600 }}>
               Result: Net margin expansion from 6.2% to 8.9%
             </div>
           </div>
 
           {/* Services & Enterprise Story */}
-          <div className="glass-card" style={{ padding: '28px' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '14px' }}>
+          <div className="glass-card" style={{ padding: '30px', borderTop: '4px solid #007ACC' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '12px' }}>
               <span className="badge" style={{ fontSize: '0.72rem' }}>Services & Tech</span>
-              <span style={{ color: '#00D09C', fontWeight: 700, fontSize: '0.85rem' }}>₹22 Cr Turnover</span>
+              <span style={{ color: '#003366', fontWeight: 700, fontSize: '0.85rem' }}>₹22 Cr Turnover</span>
             </div>
-            <h4 style={{ fontSize: '1.15rem', marginBottom: '10px', color: '#fff' }}>
+            <h4 style={{ fontSize: '1.18rem', marginBottom: '10px', color: '#003366' }}>
               Enterprise Logistics Provider
             </h4>
-            <p style={{ fontSize: '0.86rem', color: '#94A3B8', lineHeight: '1.6', marginBottom: '18px' }}>
+            <p style={{ fontSize: '0.88rem', color: '#475569', lineHeight: '1.6', marginBottom: '18px' }}>
               Founder overwhelmed with day-to-day billing approvals, tax queries, and banking limits. Finkasha deployed a full Virtual CFO cockpit, freeing the founder to focus 100% on business development.
             </p>
-            <div style={{ borderTop: '1px solid rgba(255, 255, 255, 0.06)', paddingTop: '12px', fontSize: '0.8rem', color: '#38BDF8' }}>
+            <div style={{ borderTop: '1px solid #E2E8F0', paddingTop: '12px', fontSize: '0.82rem', color: '#005BB5', fontWeight: 600 }}>
               Result: 15+ hours/week saved for Founder + ₹1.4 Cr debt refinanced at lower rate
             </div>
           </div>
         </div>
 
-        {/* CTA Bar */}
+        {/* Action Callout */}
         <div
           style={{
-            marginTop: '48px',
+            marginTop: '44px',
             textAlign: 'center',
-            background: 'linear-gradient(135deg, rgba(0, 208, 156, 0.08), rgba(6, 182, 212, 0.08))',
-            border: '1px solid rgba(0, 208, 156, 0.25)',
+            background: '#ffffff',
+            border: '2px solid #BFDBFE',
             borderRadius: '16px',
             padding: '32px',
+            boxShadow: '0 6px 24px rgba(0, 51, 102, 0.06)',
           }}
         >
-          <h3 style={{ fontSize: '1.5rem', marginBottom: '8px' }}>
+          <h3 style={{ fontSize: '1.5rem', marginBottom: '8px', color: '#003366' }}>
             Ready to Shift from Financial Anxiety to Predictable Growth?
           </h3>
-          <p style={{ color: '#94A3B8', fontSize: '0.95rem', marginBottom: '20px' }}>
+          <p style={{ color: '#475569', fontSize: '0.95rem', marginBottom: '20px' }}>
             Reserve a confidential strategic consultation with Finkasha financial leadership today.
           </p>
           <button onClick={onOpenBooking} className="btn btn-primary btn-lg">
@@ -197,7 +198,7 @@ export default function TransformationMatrix({ onOpenBooking }: TransformationMa
           :global(.matrix-row) {
             grid-template-columns: 1fr !important;
             gap: 12px !important;
-            padding: 20px 18px !important;
+            padding: 18px 16px !important;
           }
         }
       `}</style>

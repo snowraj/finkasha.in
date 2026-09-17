@@ -24,7 +24,7 @@ export default function FAQSection() {
     },
     {
       q: 'Do you work with enterprises outside of Maharashtra or across India?',
-      a: 'Yes. While Finkasha Services Private Limited is based in Maharashtra, our Fractional CFO and strategic financial advisory models operate seamlessly across India. We conduct executive reviews through secure encrypted video suites and on-site executive quarterly strategy sessions for manufacturing and trading clients.',
+      a: 'Yes. While Finkasha Services Private Limited is registered in Nashik, Maharashtra, our Fractional CFO and strategic financial advisory models operate seamlessly across India. We conduct executive reviews through secure encrypted video suites and on-site executive quarterly strategy sessions for manufacturing and trading clients.',
     },
     {
       q: 'How soon can we expect tangible financial results or positive ROI?',
@@ -33,17 +33,17 @@ export default function FAQSection() {
   ];
 
   return (
-    <section id="faq" className="section" style={{ position: 'relative' }}>
+    <section id="faq" className="section" style={{ backgroundColor: '#F8FAFC' }}>
       <div className="container" style={{ maxWidth: '880px' }}>
         <div className="section-title-wrap">
-          <div className="badge badge-gold">Clarity & Assurance</div>
+          <div className="badge">Clarity & Assurance</div>
           <h2 className="section-title">Frequently Asked Questions</h2>
           <p className="section-subtitle">
             Everything you need to know about Finkasha&apos;s Fractional CFO advisory, paid consultations, and institutional data governance.
           </p>
         </div>
 
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
           {faqs.map((faq, idx) => {
             const isOpen = openIdx === idx;
             return (
@@ -51,42 +51,42 @@ export default function FAQSection() {
                 key={idx}
                 className="glass-card"
                 style={{
-                  border: isOpen
-                    ? '1px solid rgba(0, 208, 156, 0.4)'
-                    : '1px solid rgba(148, 163, 184, 0.12)',
-                  borderRadius: '14px',
+                  border: isOpen ? '1.5px solid #005BB5' : '1px solid #D9E4F0',
+                  borderRadius: '12px',
+                  backgroundColor: '#ffffff',
+                  boxShadow: isOpen ? '0 6px 20px rgba(0, 51, 102, 0.08)' : '0 2px 8px rgba(0, 0, 0, 0.02)',
                   overflow: 'hidden',
-                  transition: 'all 0.3s ease',
+                  transition: 'all 0.25s ease',
                 }}
               >
                 <button
                   onClick={() => setOpenIdx(isOpen ? null : idx)}
                   style={{
                     width: '100%',
-                    padding: '22px 26px',
+                    padding: '20px 24px',
                     display: 'flex',
                     justifyContent: 'space-between',
                     alignItems: 'center',
                     gap: '16px',
                     textAlign: 'left',
-                    color: '#fff',
-                    fontWeight: 600,
-                    fontSize: '1.02rem',
+                    color: isOpen ? '#003366' : '#0F172A',
+                    fontWeight: 700,
+                    fontSize: '1rem',
                     cursor: 'pointer',
                   }}
                 >
-                  <span style={{ color: isOpen ? '#00D09C' : '#F8FAFC' }}>{faq.q}</span>
+                  <span>{faq.q}</span>
                   <span
                     style={{
                       width: '28px',
                       height: '28px',
                       borderRadius: '50%',
-                      background: isOpen ? 'rgba(0, 208, 156, 0.15)' : 'rgba(255, 255, 255, 0.05)',
+                      background: isOpen ? '#EBF3FA' : '#F1F5F9',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      color: isOpen ? '#00D09C' : '#94A3B8',
-                      fontSize: '1.2rem',
+                      color: isOpen ? '#003366' : '#64748B',
+                      fontSize: '1.1rem',
                       flexShrink: 0,
                       transition: 'transform 0.25s ease',
                       transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
@@ -99,12 +99,12 @@ export default function FAQSection() {
                 {isOpen && (
                   <div
                     style={{
-                      padding: '0 26px 22px 26px',
-                      color: '#94A3B8',
+                      padding: '0 24px 20px 24px',
+                      color: '#475569',
                       fontSize: '0.92rem',
                       lineHeight: '1.7',
-                      borderTop: '1px solid rgba(255, 255, 255, 0.05)',
-                      paddingTop: '16px',
+                      borderTop: '1px solid #F1F5F9',
+                      paddingTop: '14px',
                     }}
                   >
                     {faq.a}

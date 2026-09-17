@@ -62,13 +62,13 @@ export default function ROICalculator({ onOpenBooking }: ROICalculatorProps) {
   ];
 
   return (
-    <section id="comparison" className="section" style={{ backgroundColor: 'rgba(11, 18, 34, 0.4)' }}>
+    <section id="comparison" className="section" style={{ backgroundColor: '#ffffff' }}>
       <div className="container">
         <div className="section-title-wrap">
-          <div className="badge badge-gold">Economics & Strategic ROI</div>
+          <div className="badge">Economics & Strategic ROI</div>
           <h2 className="section-title">
             The Smart Executive Solution: <br />
-            <span className="text-gradient">CFO-Level Leadership at 1/5th the Cost</span>
+            <span style={{ color: '#005BB5' }}>CFO-Level Leadership at 1/5th the Cost</span>
           </h2>
           <p className="section-subtitle">
             Why top ₹5 Cr – ₹50 Cr+ enterprises choose Finkasha Fractional CFO services over expensive full-time hires or basic retrospective accountants.
@@ -79,19 +79,19 @@ export default function ROICalculator({ onOpenBooking }: ROICalculatorProps) {
           {comparisonTiers.map((tier, idx) => (
             <div
               key={idx}
-              className={`glass-card ${tier.highlight ? 'tier-highlight' : ''}`}
+              className="glass-card"
               style={{
                 padding: '36px 30px',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
                 border: tier.highlight
-                  ? '2px solid #00D09C'
-                  : '1px solid rgba(148, 163, 184, 0.15)',
-                backgroundColor: tier.highlight ? 'rgba(14, 25, 48, 0.95)' : 'rgba(11, 18, 34, 0.65)',
+                  ? '2px solid #003366'
+                  : '1px solid #E2E8F0',
+                backgroundColor: tier.highlight ? '#F0F5FB' : '#ffffff',
                 boxShadow: tier.highlight
-                  ? '0 15px 40px rgba(0, 208, 156, 0.2), 0 0 20px rgba(0, 208, 156, 0.1)'
-                  : 'none',
+                  ? '0 12px 36px rgba(0, 51, 102, 0.12)'
+                  : '0 4px 16px rgba(0, 0, 0, 0.04)',
                 position: 'relative',
               }}
             >
@@ -102,13 +102,13 @@ export default function ROICalculator({ onOpenBooking }: ROICalculatorProps) {
                     top: '-13px',
                     left: '50%',
                     transform: 'translateX(-50%)',
-                    background: 'var(--grad-primary)',
-                    color: '#05141c',
+                    backgroundColor: '#003366',
+                    color: '#ffffff',
                     fontWeight: 800,
                     fontSize: '0.72rem',
                     padding: '4px 14px',
                     borderRadius: '9999px',
-                    letterSpacing: '0.08em',
+                    letterSpacing: '0.06em',
                     textTransform: 'uppercase',
                     whiteSpace: 'nowrap',
                   }}
@@ -119,21 +119,27 @@ export default function ROICalculator({ onOpenBooking }: ROICalculatorProps) {
 
               <div>
                 <span
-                  className={`badge ${tier.highlight ? 'badge-gold' : ''}`}
-                  style={{ fontSize: '0.72rem', marginBottom: '14px' }}
+                  className="badge"
+                  style={{
+                    fontSize: '0.72rem',
+                    marginBottom: '14px',
+                    backgroundColor: tier.highlight ? '#EBF3FA' : '#F1F5F9',
+                    borderColor: tier.highlight ? '#BFDBFE' : '#CBD5E1',
+                    color: tier.highlight ? '#003366' : '#475569',
+                  }}
                 >
                   {tier.badge}
                 </span>
 
-                <h3 style={{ fontSize: '1.45rem', marginBottom: '10px', color: '#fff' }}>
+                <h3 style={{ fontSize: '1.45rem', marginBottom: '10px', color: '#003366' }}>
                   {tier.title}
                 </h3>
 
                 <div
                   style={{
                     fontSize: '1.25rem',
-                    fontWeight: 700,
-                    color: tier.highlight ? '#00D09C' : '#CBD5E1',
+                    fontWeight: 800,
+                    color: tier.highlight ? '#003366' : '#334155',
                     marginBottom: '12px',
                     fontFamily: 'var(--font-heading)',
                   }}
@@ -143,12 +149,12 @@ export default function ROICalculator({ onOpenBooking }: ROICalculatorProps) {
 
                 <div
                   style={{
-                    fontSize: '0.82rem',
-                    color: tier.highlight ? '#38BDF8' : '#94A3B8',
+                    fontSize: '0.84rem',
+                    color: tier.highlight ? '#005BB5' : '#64748B',
                     fontWeight: 600,
-                    marginBottom: '24px',
-                    borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
-                    paddingBottom: '16px',
+                    marginBottom: '22px',
+                    borderBottom: '1px solid #E2E8F0',
+                    paddingBottom: '14px',
                   }}
                 >
                   {tier.focus}
@@ -171,11 +177,12 @@ export default function ROICalculator({ onOpenBooking }: ROICalculatorProps) {
                         display: 'flex',
                         alignItems: 'flex-start',
                         gap: '10px',
-                        color: feat.startsWith('❌') ? '#94A3B8' : '#E2E8F0',
+                        color: feat.startsWith('❌') ? '#64748B' : '#0F172A',
+                        lineHeight: '1.5',
                       }}
                     >
                       {!feat.startsWith('❌') && (
-                        <span style={{ color: tier.highlight ? '#00D09C' : '#38BDF8' }}>✓</span>
+                        <span style={{ color: '#005BB5', fontWeight: 700 }}>✓</span>
                       )}
                       <span>{feat}</span>
                     </li>
@@ -197,7 +204,7 @@ export default function ROICalculator({ onOpenBooking }: ROICalculatorProps) {
                   <button
                     onClick={onOpenBooking}
                     className="btn btn-secondary"
-                    style={{ width: '100%', padding: '14px', fontSize: '0.85rem' }}
+                    style={{ width: '100%', padding: '14px', fontSize: '0.88rem' }}
                   >
                     Discuss Fit
                   </button>
