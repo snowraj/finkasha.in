@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import CashLeakageCalculator from '@/components/CashLeakageCalculator';
 import TransformationMatrix from '@/components/TransformationMatrix';
-import ROICalculator from '@/components/ROICalculator';
+
 import FAQSection from '@/components/FAQSection';
 import BookingModal from '@/components/BookingModal';
 
@@ -541,8 +541,6 @@ export default function Home() {
       {/* 7. BEFORE VS AFTER TRANSFORMATION MATRIX */}
       <TransformationMatrix onOpenBooking={() => openBooking()} />
 
-      {/* 8. ROI & ECONOMICS: FRACTIONAL CFO VS CA VS FULL-TIME */}
-      <ROICalculator onOpenBooking={() => openBooking()} />
 
       {/* 9. FOUNDER & PHILOSOPHY: "LEARN ONCE, BENEFIT FOREVER" */}
       <section className="section" style={{ backgroundColor: '#F0F5FB', borderTop: '1px solid #E2E8F0', borderBottom: '1px solid #E2E8F0' }}>
