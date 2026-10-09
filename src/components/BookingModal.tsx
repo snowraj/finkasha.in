@@ -68,7 +68,7 @@ export default function BookingModal({
     }, 600);
   };
 
-  const whatsappUrl = `https://wa.me/919970208927?text=${encodeURIComponent(
+  const whatsappUrl = `https://wa.me/919684704101?text=${encodeURIComponent(
     `Hello Finkasha Team, I just requested a Strategic Financial Consultation.\n\nCompany: ${formData.companyName}\nTurnover: ${formData.turnover}\nIndustry: ${formData.industry}\nRole: ${formData.role}\nPrimary Goal: ${formData.primaryGoal}\nName: ${formData.fullName}\nPhone: ${formData.phone}`
   )}`;
 

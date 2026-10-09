@@ -49,12 +49,16 @@ export default function Header({ onOpenBooking }: HeaderProps) {
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-            <a href="tel:+919970208927" style={{ color: '#E2E8F0', display: 'flex', alignItems: 'center', gap: '4px' }}>
-              <span>📞 +91 9970208927</span>
+            <a href="tel:+917477711173" style={{ color: '#E2E8F0', display: 'flex', alignItems: 'center', gap: '4px' }}>
+              <span>📞 +91 74777 11173</span>
             </a>
             <span style={{ color: '#64748B' }}>|</span>
-            <a href="mailto:kamlesh@finkasha.com" style={{ color: '#E2E8F0' }}>
-              ✉️ kamlesh@finkasha.com
+            <a href="tel:+919684704101" style={{ color: '#E2E8F0', display: 'flex', alignItems: 'center', gap: '4px' }}>
+              <span>+91 96847 04101</span>
+            </a>
+            <span style={{ color: '#64748B' }}>|</span>
+            <a href="mailto:office@finkasha.com" style={{ color: '#E2E8F0' }}>
+              ✉️ office@finkasha.com
             </a>
           </div>
         </div>

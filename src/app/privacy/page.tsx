@@ -247,8 +247,8 @@ export default function PrivacyPage() {
               <div><strong>Grievance Officer:</strong> Kamlesh Thakur (Founder & Director)</div>
               <div><strong>Entity:</strong> Finkasha Services Private Limited</div>
               <div><strong>Address:</strong> Office 501, A-wing, Mahalaxmi New Castle, Opp. Shri Krishna Lawns, Ayodhya Nagar, Nashik Pune Road, Nashik, Maharashtra 422101</div>
-              <div><strong>Email:</strong> <a href="mailto:kamlesh@finkasha.com" style={{ color: '#005BB5' }}>kamlesh@finkasha.com</a> / <a href="mailto:contact@finkasha.com" style={{ color: '#005BB5' }}>contact@finkasha.com</a></div>
-              <div><strong>Phone:</strong> <a href="tel:+919970208927" style={{ color: '#005BB5' }}>+91 9970208927</a> / <a href="tel:+917477711173" style={{ color: '#005BB5' }}>+91 74777 11173</a></div>
+              <div><strong>Email:</strong> <a href="mailto:office@finkasha.com" style={{ color: '#005BB5' }}>office@finkasha.com</a></div>
+              <div><strong>Phone:</strong> <a href="tel:+917477711173" style={{ color: '#005BB5' }}>+91 74777 11173</a> / <a href="tel:+919684704101" style={{ color: '#005BB5' }}>+91 96847 04101</a></div>
               <div><strong>Response Window:</strong> We acknowledge data grievances within 48 hours and resolve within statutory timelines.</div>
             </div>
           </section>

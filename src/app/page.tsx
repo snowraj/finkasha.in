@@ -585,9 +585,7 @@ export default function Home() {
               <div style={{ color: '#005BB5', fontSize: '0.88rem', fontWeight: 700 }}>
                 Founder & Director, Finkasha Services Private Limited
               </div>
-              <div style={{ color: '#64748B', fontSize: '0.8rem', marginTop: '4px' }}>
-                kamlesh@finkasha.com | +91 9970208927
-              </div>
+
             </div>
 
             {/* Philosophy Copy */}
@@ -667,7 +665,7 @@ export default function Home() {
               <span>⚡</span>
             </button>
             <a
-              href="https://wa.me/919970208927?text=Hello%20Finkasha,%20I%20would%20like%20to%20inquire%20about%20Fractional%20CFO%20services"
+              href="https://wa.me/919684704101?text=Hello%20Finkasha,%20I%20would%20like%20to%20inquire%20about%20Fractional%20CFO%20services"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-secondary btn-lg"

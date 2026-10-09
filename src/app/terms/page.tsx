@@ -176,7 +176,7 @@ export default function TermsPage() {
                 <strong>Consultation Bookings:</strong> Paid 1-on-1 strategic consultation slots reserved by business owners, CFOs, or CAs are confirmed only upon receipt of the agreed advisory fee or formal confirmation from our executive desk.
               </li>
               <li>
-                <strong>Rescheduling Policy:</strong> Clients may reschedule a confirmed consultation session without penalty up to 24 hours prior to the scheduled slot by giving written notice to <code style={{ color: '#005BB5' }}>kamlesh@finkasha.com</code> or via our executive WhatsApp line.
+                <strong>Rescheduling Policy:</strong> Clients may reschedule a confirmed consultation session without penalty up to 24 hours prior to the scheduled slot by giving written notice to <code style={{ color: '#005BB5' }}>office@finkasha.com</code> or via our executive WhatsApp line.
               </li>
               <li>
                 <strong>Cancellation & Refunds:</strong> Due to the allocation of senior executive time and diagnostic preparation, consultation fees are non-refundable once an advisory diagnostic review has commenced. In exceptional circumstances, credit toward future advisory services may be granted at Finkasha&apos;s sole discretion.
@@ -244,8 +244,8 @@ export default function TermsPage() {
               <div><strong>Entity:</strong> Finkasha Services Private Limited</div>
               <div><strong>Attn:</strong> Kamlesh Thakur (Founder / Director)</div>
               <div><strong>Office:</strong> Office 501, A-wing, Mahalaxmi New Castle, Opp. Shri Krishna Lawns, Ayodhya Nagar, Nashik Pune Road, Nashik, Maharashtra 422101</div>
-              <div><strong>Email:</strong> <a href="mailto:kamlesh@finkasha.com" style={{ color: '#005BB5' }}>kamlesh@finkasha.com</a> / <a href="mailto:contact@finkasha.com" style={{ color: '#005BB5' }}>contact@finkasha.com</a></div>
-              <div><strong>Phone:</strong> <a href="tel:+919970208927" style={{ color: '#005BB5' }}>+91 9970208927</a> / <a href="tel:+917477711173" style={{ color: '#005BB5' }}>+91 74777 11173</a></div>
+              <div><strong>Email:</strong> <a href="mailto:office@finkasha.com" style={{ color: '#005BB5' }}>office@finkasha.com</a></div>
+              <div><strong>Phone:</strong> <a href="tel:+917477711173" style={{ color: '#005BB5' }}>+91 74777 11173</a> / <a href="tel:+919684704101" style={{ color: '#005BB5' }}>+91 96847 04101</a></div>
               <div><strong>Website:</strong> <a href="https://www.finkasha.in" style={{ color: '#005BB5' }}>www.finkasha.in</a> / <a href="https://www.finkasha.com" style={{ color: '#005BB5' }}>www.finkasha.com</a></div>
             </div>
           </section>

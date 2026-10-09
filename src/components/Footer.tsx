@@ -166,14 +166,14 @@ export default function Footer({ onOpenBooking }: FooterProps) {
               <div>
                 <strong style={{ color: '#fff' }}>Contact Numbers:</strong>
                 <div>
-                  <a href="tel:+919970208927" style={{ color: '#93C5FD', fontWeight: 600 }}>+91 9970208927</a> / <a href="tel:+917477711173" style={{ color: '#93C5FD', fontWeight: 600 }}>+91 74777 11173</a>
+                  <a href="tel:+917477711173" style={{ color: '#93C5FD', fontWeight: 600 }}>+91 74777 11173</a> / <a href="tel:+919684704101" style={{ color: '#93C5FD', fontWeight: 600 }}>+91 96847 04101</a>
                 </div>
               </div>
 
               <div>
                 <strong style={{ color: '#fff' }}>Official Emails:</strong>
                 <div>
-                  <a href="mailto:kamlesh@finkasha.com" style={{ color: '#93C5FD' }}>kamlesh@finkasha.com</a> / <a href="mailto:contact@finkasha.com" style={{ color: '#93C5FD' }}>contact@finkasha.com</a>
+                  <a href="mailto:office@finkasha.com" style={{ color: '#93C5FD' }}>office@finkasha.com</a>
                 </div>
               </div>
 
