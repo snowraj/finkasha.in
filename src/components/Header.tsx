@@ -45,7 +45,7 @@ export default function Header({ onOpenBooking }: HeaderProps) {
           <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
             <span>🏢 <strong>Finkasha Services Private Limited</strong></span>
             <span style={{ color: '#93C5FD' }}>|</span>
-            <span style={{ color: '#93C5FD', fontWeight: 600 }}>Financial Management Consultancy</span>
+            <span style={{ color: '#93C5FD', fontWeight: 600 }}>Financial Management & CFO Advisory</span>
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
@@ -128,7 +128,7 @@ export default function Header({ onOpenBooking }: HeaderProps) {
                 </span>
               </div>
               <div style={{ fontSize: '0.68rem', color: '#64748B', letterSpacing: '0.04em', fontWeight: 600 }}>
-                FRACTIONAL CFO & FINANCIAL ADVISORY
+                VIRTUAL CFO & FINANCIAL MANAGEMENT
               </div>
             </div>
           </Link>
@@ -139,16 +139,13 @@ export default function Header({ onOpenBooking }: HeaderProps) {
               Services
             </Link>
             <Link href="/#diagnostic" style={{ fontSize: '0.92rem', color: '#334155', fontWeight: 600 }} className="nav-link">
-              Cash Leakage Diagnostic
+              Financial Health Check
             </Link>
             <Link href="/#transformation" style={{ fontSize: '0.92rem', color: '#334155', fontWeight: 600 }} className="nav-link">
               Case Studies
             </Link>
-            <Link href="/#comparison" style={{ fontSize: '0.92rem', color: '#334155', fontWeight: 600 }} className="nav-link">
-              Virtual CFO vs CA
-            </Link>
             <Link href="/#faq" style={{ fontSize: '0.92rem', color: '#334155', fontWeight: 600 }} className="nav-link">
-              FAQ
+              FAQs
             </Link>
           </nav>
 
@@ -160,7 +157,7 @@ export default function Header({ onOpenBooking }: HeaderProps) {
               style={{ padding: '10px 22px' }}
             >
               <span className="pulse-dot" style={{ width: '6px', height: '6px', backgroundColor: '#93C5FD' }}></span>
-              <span>Book a Free Consultation</span>
+              <span>Explore 1 on 1 Executive Finance Session</span>
             </button>
 
             {/* Mobile Menu Button */}
@@ -210,7 +207,7 @@ export default function Header({ onOpenBooking }: HeaderProps) {
               onClick={() => setMobileMenuOpen(false)}
               style={{ color: '#003366', fontSize: '1rem', fontWeight: 600 }}
             >
-              Cash Leakage Diagnostic
+              Financial Health Check
             </Link>
             <Link
               href="/#transformation"
@@ -220,18 +217,11 @@ export default function Header({ onOpenBooking }: HeaderProps) {
               Case Studies
             </Link>
             <Link
-              href="/#comparison"
-              onClick={() => setMobileMenuOpen(false)}
-              style={{ color: '#003366', fontSize: '1rem', fontWeight: 600 }}
-            >
-              Virtual CFO vs CA
-            </Link>
-            <Link
               href="/#faq"
               onClick={() => setMobileMenuOpen(false)}
               style={{ color: '#003366', fontSize: '1rem', fontWeight: 600 }}
             >
-              FAQ
+              FAQs
             </Link>
             <button
               onClick={() => {
@@ -241,7 +231,7 @@ export default function Header({ onOpenBooking }: HeaderProps) {
               className="btn btn-primary"
               style={{ width: '100%', marginTop: '8px' }}
             >
-              Book a Free Consultation
+              Explore 1 on 1 Executive Finance Session
             </button>
           </div>
         )}

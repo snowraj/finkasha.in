@@ -39,13 +39,13 @@ export default function Home() {
           <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '20px' }}>
             <div className="badge">
               <span className="pulse-dot" style={{ width: '6px', height: '6px', backgroundColor: '#005BB5' }}></span>
-              <span>Fractional CFO & Advisory for ₹5 Cr – ₹50 Cr+ Enterprises</span>
+              <span>Financial Management & CFO Support for ₹5 Cr–₹50 Cr Businesses</span>
             </div>
           </div>
 
           {/* Core Tagline matching finkasha.com */}
           <div style={{ fontSize: '1.2rem', fontWeight: 700, color: '#005BB5', marginBottom: '10px', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
-            Making Your Money Grow
+            UNDERSTAND YOUR CASH. GROW WITH CLARITY.
           </div>
 
           {/* Problem-Agitate Headline */}
@@ -60,9 +60,9 @@ export default function Home() {
               color: '#003366',
             }}
           >
-            Stop Guessing Your Finances.{' '}
+            Know Where Your Cash Is Going.{' '}
             <br />
-            <span style={{ color: '#005BB5' }}>Eliminate Cash Leakage</span> & Scale with Total Clarity.
+            <span style={{ color: '#005BB5' }}>Make Better Decisions.</span> Grow With More Control.
           </h1>
 
           {/* Subheadline directly integrating the TFC UVP */}
@@ -75,7 +75,7 @@ export default function Home() {
               lineHeight: 1.65,
             }}
           >
-            Finkasha empowers middle-market founders, existing CFOs, and CAs across Manufacturing, Trading, and Services with institutional-grade <strong style={{ color: '#003366' }}>Fractional CFO leadership</strong>, working capital optimization, and predictable profitability architecture.
+            Finkasha helps manufacturing, trading and service businesses understand their numbers, manage cash better, plan ahead and make important business decisions with more confidence.
           </p>
 
           {/* Dual Action CTAs */}
@@ -93,7 +93,7 @@ export default function Home() {
               onClick={() => openBooking()}
               className="btn btn-primary btn-lg"
             >
-              <span>Book a Free Financial Clarity Session</span>
+              <span>Book 1 on 1 Executive Finance Session</span>
               <span style={{ fontSize: '1.1rem' }}>⚡</span>
             </button>
 
@@ -101,7 +101,7 @@ export default function Home() {
               href="#diagnostic"
               className="btn btn-secondary btn-lg"
             >
-              <span>Run Cash Leakage Diagnostic</span>
+              <span>Check Your Business Financial Health</span>
               <span>↓</span>
             </a>
           </div>
