@@ -127,7 +127,7 @@ export default function Home() {
                 40+
               </div>
               <div style={{ fontSize: '0.8rem', color: '#64748B', marginTop: '2px', textTransform: 'uppercase', letterSpacing: '0.04em', fontWeight: 600 }}>
-                Corporate Transformations
+                Organisations Worked With
               </div>
             </div>
             <div>
@@ -135,7 +135,7 @@ export default function Home() {
                 350+
               </div>
               <div style={{ fontSize: '0.8rem', color: '#64748B', marginTop: '2px', textTransform: 'uppercase', letterSpacing: '0.04em', fontWeight: 600 }}>
-                Client Enterprises Served
+                Individual Business Owners
               </div>
             </div>
             <div>
@@ -143,7 +143,7 @@ export default function Home() {
                 ₹500 Cr+
               </div>
               <div style={{ fontSize: '0.8rem', color: '#64748B', marginTop: '2px', textTransform: 'uppercase', letterSpacing: '0.04em', fontWeight: 600 }}>
-                Advised Volume
+                Turnover Analysed
               </div>
             </div>
             <div>
@@ -166,15 +166,18 @@ export default function Home() {
           padding: '20px 0',
         }}
       >
-        <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px' }}>
+        <div className="container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '14px', textAlign: 'center' }}>
           <span style={{ fontSize: '0.84rem', color: '#003366', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
-            Trusted Financial Navigation Across:
+            BUSINESSES WE WORK WITH
           </span>
-          <div style={{ display: 'flex', gap: '24px', flexWrap: 'wrap', alignItems: 'center', fontSize: '0.92rem', color: '#334155', fontWeight: 600 }}>
-            <span>🏭 Manufacturing (₹5 - ₹50 Cr+)</span>
-            <span>🚢 Trading & Export-Import</span>
-            <span>💼 Corporate & Enterprise Services</span>
-            <span>📊 In-House CFOs & CAs</span>
+          <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center', gap: '24px', fontSize: '1rem', color: '#334155', fontWeight: 600 }}>
+            <span>Manufacturing</span>
+            <span style={{ color: '#94A3B8' }}>•</span>
+            <span>Trading & Distribution</span>
+            <span style={{ color: '#94A3B8' }}>•</span>
+            <span>B2B Services</span>
+            <span style={{ color: '#94A3B8' }}>•</span>
+            <span>Business Owners & Finance Teams</span>
           </div>
         </div>
       </section>
