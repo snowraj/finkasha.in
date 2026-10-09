@@ -229,7 +229,7 @@ export default function Home() {
                 desc: 'Expansion needs money before it starts giving money back. You need to know how much cash will be required, where it will come from and whether too much money will get blocked in the process.',
               },
             ].map((card, idx) => (
-              <div key={idx} className="glass-card" style={{ padding: '30px', border: '1px solid #D9E4F0' }}>
+              <div key={idx} className="glass-card" style={{ padding: '30px', border: '1px solid #D9E4F0', textAlign: 'center' }}>
                 <div style={{ fontSize: '2.4rem', marginBottom: '14px' }}>{card.icon}</div>
                 <h3 style={{ fontSize: '1.25rem', marginBottom: '10px', color: '#003366' }}>{card.title}</h3>
                 <p style={{ color: '#475569', fontSize: '0.9rem', lineHeight: '1.65' }}>{card.desc}</p>
@@ -241,18 +241,18 @@ export default function Home() {
           <div
             style={{
               marginTop: '44px',
-              padding: '24px 32px',
+              padding: '32px 24px',
               borderRadius: '12px',
               background: '#F0F5FB',
               border: '1.5px solid #BFDBFE',
               display: 'flex',
+              flexDirection: 'column',
               alignItems: 'center',
-              justifyContent: 'space-between',
-              flexWrap: 'wrap',
+              textAlign: 'center',
               gap: '20px',
             }}
           >
-            <div>
+            <div style={{ maxWidth: '800px' }}>
               <h4 style={{ fontSize: '1.2rem', color: '#003366', marginBottom: '4px' }}>
                 Know What Is Blocking Your Cash
               </h4>
