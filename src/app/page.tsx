@@ -127,7 +127,7 @@ export default function Home() {
                 40+
               </div>
               <div style={{ fontSize: '0.8rem', color: '#64748B', marginTop: '2px', textTransform: 'uppercase', letterSpacing: '0.04em', fontWeight: 600 }}>
-                Organisations Worked With
+                Organisations
               </div>
             </div>
             <div>
