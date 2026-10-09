@@ -200,33 +200,33 @@ export default function Home() {
             {[
               {
                 icon: '💸',
-                title: 'Trapped Working Capital & Cash Leakage',
-                desc: 'Sales are booming on paper, but bank accounts stay dry. Debtor collection cycles (DSO) stretch past 70+ days while suppliers demand immediate payments, sparking recurring liquidity panic.',
+                title: 'Sales Are Growing, But Cash Is Still Low',
+                desc: 'Money may be blocked in customer payments, stock or day-to-day expenses. Sales look healthy, but there may still not be enough cash available at the end of the month.',
               },
               {
                 icon: '📄',
-                title: 'Confusing, Rearview Financial Reports',
-                desc: 'Relying solely on historical tax filings and basic ledger balances. You cannot see real-time product-line gross margins or project cash flow requirements 60 days ahead.',
+                title: 'You Have Reports. But Do They Help You Decide?',
+                desc: 'Your accounts tell you what has already happened. But you also need to know what is changing, what needs attention and what may happen next.',
               },
               {
                 icon: '💬',
-                title: 'Casual Advice Replacing True Intelligence',
-                desc: 'Hesitant to trust external firms, many founders depend on friendly, informal advice or social media tips. This creates temporary band-aids that trigger bigger compliance risks.',
+                title: 'Too Many Opinions. Not Enough Clear Answers.',
+                desc: 'Different people may give different advice. What you really need is a clear view of your own numbers before deciding what to do.',
               },
               {
                 icon: '⚖️',
-                title: 'Rising Regulatory & Compliance Anxiety',
-                desc: 'Constant dread of sudden GST reconciliations, bank scrutiny, or delayed compliance penalties that could jeopardize years of reputational and corporate sweat equity.',
+                title: 'Financial Gaps Keep Creating Unnecessary Stress',
+                desc: 'Missed reconciliations, delayed payments, unclear records or unexpected dues can turn into bigger problems if they are not spotted early.',
               },
               {
                 icon: '🛑',
-                title: 'Absence of Strategic Financial Architecture',
-                desc: 'Without a dedicated Chief Financial Officer sitting with you to brainstorm expansions, capital costs, and debt lines, major decisions are made on pure gut feel.',
+                title: 'Big Decisions Are Still Based On Gut Feel',
+                desc: 'Hiring more people, buying machinery, taking a loan or opening a new location are big decisions. You should know what they will do to your cash before you commit.',
               },
               {
                 icon: '🛡️',
-                title: 'No Forward-Looking Financial Strategy',
-                desc: 'Without a dedicated CFO driving expansion planning, capital cost analysis, and scenario modelling, major business decisions are made purely on gut feel with no quantified downside.',
+                title: 'You Want To Grow. But How Much Can The Business Afford?',
+                desc: 'Expansion needs money before it starts giving money back. You need to know how much cash will be required, where it will come from and whether too much money will get blocked in the process.',
               },
             ].map((card, idx) => (
               <div key={idx} className="glass-card" style={{ padding: '30px', border: '1px solid #D9E4F0' }}>
@@ -254,14 +254,14 @@ export default function Home() {
           >
             <div>
               <h4 style={{ fontSize: '1.2rem', color: '#003366', marginBottom: '4px' }}>
-                Plug Cash Leakages & Build Predictable Liquidity
+                Know What Is Blocking Your Cash
               </h4>
               <p style={{ color: '#475569', fontSize: '0.9rem' }}>
-                Finkasha acts as your financial co-pilot, giving you institutional visibility into every rupee.
+                Finkasha helps you understand where your money is blocked, what needs attention and what to plan for before making your next big business decision.
               </p>
             </div>
             <button onClick={() => openBooking()} className="btn btn-primary">
-              Schedule Diagnostic Session ⚡
+              Book 1 on 1 Executive Finance Session →
             </button>
           </div>
         </div>
