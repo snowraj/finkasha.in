@@ -186,13 +186,13 @@ export default function Home() {
       <section className="section" style={{ backgroundColor: '#ffffff' }}>
         <div className="container">
           <div className="section-title-wrap">
-            <div className="badge badge-gold">The Hidden Reality</div>
+            <div className="badge badge-gold">WHY CASH STILL FEELS TIGHT</div>
             <h2 className="section-title">
-              Why Most ₹20 Cr – ₹50 Cr+ Founders <br />
-              <span style={{ color: '#DC2626' }}>Struggle with Cash Flow Despite Growing Sales</span>
+              Why ₹5 Cr–₹50 Cr Businesses Are Always Short Of Cash <br />
+              <span style={{ color: '#DC2626' }}>Even When Sales Are Growing</span>
             </h2>
             <p className="section-subtitle">
-              Growing your revenue from ₹5 Cr to ₹50 Cr is an incredible achievement. But what got you here won&apos;t get you to ₹100 Cr. Are these financial blind spots quietly draining your momentum?
+              As your business grows, more cash gets blocked in stocks, customer payments, salaries, suppliers and expansion. Sales may be increasing, but if cash is not planned properly, the business faces same problem every month.
             </p>
           </div>
 
