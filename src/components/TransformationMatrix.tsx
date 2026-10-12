@@ -2,36 +2,32 @@
 
 import React from 'react';
 
-interface TransformationMatrixProps {
-  onOpenBooking: () => void;
-}
-
-export default function TransformationMatrix({ onOpenBooking }: TransformationMatrixProps) {
+export default function TransformationMatrix() {
   const comparisonItems = [
     {
-      domain: 'Strategic Leadership & Vision',
-      before: 'Absence of structured financial brainstorming. Relying on gut feel, informal friendly advice, or social media quick-fixes.',
-      after: 'Institutional-grade Fractional CFO advisory with forward-looking 3-year strategic planning and cash flow models.',
+      domain: 'Business Decisions',
+      before: 'Decisions often depend on instinct and incomplete information.',
+      after: 'Decisions are reviewed along with their financial impact.',
     },
     {
-      domain: 'Cash Flow Visibility',
-      before: 'Trapped in unpredictable cash shortages despite showing paper profits. High stress during monthly vendor & salary cycles.',
-      after: 'Rolling 13-week rolling cash flow forecasts with daily/weekly liquidity visibility and early warning indicators.',
+      domain: 'Cash Flow',
+      before: "You know today's bank balance, but not what may be needed next.",
+      after: 'See expected collections, payments and upcoming cash requirements.',
     },
     {
-      domain: 'Cash Leakage & Cost Control',
-      before: 'Undetected operational leakage, runaway debtor DSO (70-100+ days), and margin erosion draining bank lines.',
-      after: 'Rigorous leak-plugging protocols, debtor collection frameworks, and direct cost-center rationalization.',
+      domain: 'Blocked Cash',
+      before: 'Money may remain stuck in customers, stock or operations.',
+      after: 'Regularly identify where cash is blocked or being used inefficiently.',
     },
     {
-      domain: 'Compliance & Tax Architecture',
-      before: 'Accountants overwhelmed with retroactive GST/TDS filings, fearing sudden regulatory notices or penalty shocks.',
-      after: 'Proactive tax structuring, zero-delay statutory calendar, and institutional compliance reviews.',
+      domain: 'Business Performance',
+      before: 'Reports mainly tell you what already happened.',
+      after: 'Dashboards and analysis show what is changing and what needs attention.',
     },
     {
-      domain: 'Strategic Financial Planning',
-      before: 'No structured financial plan or forward-looking budgets; decisions driven by gut feel with no scenario analysis or quantified downside.',
-      after: 'Dynamic annual budgets, quarterly reforecasts, and scenario models that allow leadership to make confident, data-backed decisions.',
+      domain: 'Future Planning',
+      before: 'Growth decisions may be made without knowing the full cash requirement.',
+      after: 'Budgets, forecasts and financial models help you plan before committing money.',
     },
   ];
 
@@ -39,13 +35,13 @@ export default function TransformationMatrix({ onOpenBooking }: TransformationMa
     <section id="transformation" className="section" style={{ backgroundColor: '#F8FAFC' }}>
       <div className="container">
         <div className="section-title-wrap">
-          <div className="badge badge-gold">The Transformation Matrix</div>
+          <div className="badge badge-gold">THE DIFFERENCE CLEAR FINANCIAL MANAGEMENT CAN MAKE</div>
           <h2 className="section-title">
-            The Difference Between <span style={{ color: '#DC2626' }}>Financial Anxiety</span> and{' '}
-            <span style={{ color: '#003366' }}>Total Clarity</span>
+            From <span style={{ color: '#DC2626' }}>Financial Confusion</span> To{' '}
+            <span style={{ color: '#003366' }}>Better Business Decisions</span>
           </h2>
           <p className="section-subtitle">
-            Most ₹5 Cr – ₹50 Cr+ enterprises don&apos;t fail from lack of sales—they falter due to poor financial architecture and unmonitored cash bleed. Here is how Finkasha bridges that chasm.
+            As a business grows, managing cash, costs, collections and future plans becomes more difficult. Finkasha helps bring these numbers together so management can understand what needs attention and plan the next move with more clarity.
           </p>
         </div>
 
@@ -57,7 +53,6 @@ export default function TransformationMatrix({ onOpenBooking }: TransformationMa
             borderRadius: '16px',
             overflow: 'hidden',
             boxShadow: '0 8px 30px rgba(0, 51, 102, 0.07)',
-            marginBottom: '48px',
           }}
         >
           {/* Header Row */}
@@ -74,12 +69,12 @@ export default function TransformationMatrix({ onOpenBooking }: TransformationMa
             }}
             className="matrix-row matrix-header"
           >
-            <div style={{ color: '#93C5FD' }}>OPERATIONAL PILLAR</div>
-            <div style={{ color: '#FCA5A5', display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <span>✕ Traditional Reactive Accounting</span>
-            </div>
+            <div style={{ color: '#93C5FD' }}>Area</div>
             <div style={{ color: '#6EE7B7', display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <span>✓ Finkasha Virtual CFO System</span>
+              <span>With Finkasha</span>
+            </div>
+            <div style={{ color: '#FCA5A5', display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <span>Without Structured Financial Management</span>
             </div>
           </div>
 
@@ -101,92 +96,14 @@ export default function TransformationMatrix({ onOpenBooking }: TransformationMa
               <div style={{ fontWeight: 700, color: '#003366', display: 'flex', alignItems: 'center' }}>
                 {item.domain}
               </div>
-              <div style={{ color: '#64748B', paddingRight: '20px', lineHeight: '1.6' }}>
-                {item.before}
-              </div>
-              <div style={{ color: '#0F172A', paddingRight: '10px', lineHeight: '1.6', fontWeight: 600 }}>
+              <div style={{ color: '#0F172A', paddingRight: '20px', lineHeight: '1.6', fontWeight: 600 }}>
                 {item.after}
+              </div>
+              <div style={{ color: '#64748B', paddingRight: '10px', lineHeight: '1.6' }}>
+                {item.before}
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Transformation Stories / ICP Proof */}
-        <div className="grid-3">
-          {/* Manufacturing Story */}
-          <div className="glass-card" style={{ padding: '30px', borderTop: '4px solid #003366' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '12px' }}>
-              <span className="badge" style={{ fontSize: '0.72rem' }}>Manufacturing</span>
-              <span style={{ color: '#003366', fontWeight: 700, fontSize: '0.85rem' }}>₹32 Cr Turnover</span>
-            </div>
-            <h4 style={{ fontSize: '1.18rem', marginBottom: '10px', color: '#003366' }}>
-              Auto Component Manufacturer
-            </h4>
-            <p style={{ fontSize: '0.88rem', color: '#475569', lineHeight: '1.6', marginBottom: '18px' }}>
-              Trapped with ₹4.2 Cr in delayed receivables and high overdraft interest. Finkasha instituted a rolling 13-week forecast, renegotiated vendor payment terms, and recovered ₹68L in working capital within 90 days.
-            </p>
-            <div style={{ borderTop: '1px solid #E2E8F0', paddingTop: '12px', fontSize: '0.82rem', color: '#005BB5', fontWeight: 600 }}>
-              Result: 38% reduction in financing costs + 100% on-time supplier cycles
-            </div>
-          </div>
-
-          {/* Trading & Export Story */}
-          <div className="glass-card" style={{ padding: '30px', borderTop: '4px solid #005BB5' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '12px' }}>
-              <span className="badge badge-gold" style={{ fontSize: '0.72rem' }}>Trading & Export</span>
-              <span style={{ color: '#1D4ED8', fontWeight: 700, fontSize: '0.85rem' }}>₹48 Cr Turnover</span>
-            </div>
-            <h4 style={{ fontSize: '1.18rem', marginBottom: '10px', color: '#003366' }}>
-              Chemical Import-Exporter
-            </h4>
-            <p style={{ fontSize: '0.88rem', color: '#475569', lineHeight: '1.6', marginBottom: '18px' }}>
-              Rapid turnover growth masked 2.8% unbilled currency & freight leakage. Finkasha installed weekly product-line margin accounting and plugged ₹52L annual margin leakage.
-            </p>
-            <div style={{ borderTop: '1px solid #E2E8F0', paddingTop: '12px', fontSize: '0.82rem', color: '#005BB5', fontWeight: 600 }}>
-              Result: Net margin expansion from 6.2% to 8.9%
-            </div>
-          </div>
-
-          {/* Services & Enterprise Story */}
-          <div className="glass-card" style={{ padding: '30px', borderTop: '4px solid #007ACC' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '12px' }}>
-              <span className="badge" style={{ fontSize: '0.72rem' }}>Services & Tech</span>
-              <span style={{ color: '#003366', fontWeight: 700, fontSize: '0.85rem' }}>₹22 Cr Turnover</span>
-            </div>
-            <h4 style={{ fontSize: '1.18rem', marginBottom: '10px', color: '#003366' }}>
-              Enterprise Logistics Provider
-            </h4>
-            <p style={{ fontSize: '0.88rem', color: '#475569', lineHeight: '1.6', marginBottom: '18px' }}>
-              Founder overwhelmed with day-to-day billing approvals, tax queries, and banking limits. Finkasha deployed a full Virtual CFO cockpit, freeing the founder to focus 100% on business development.
-            </p>
-            <div style={{ borderTop: '1px solid #E2E8F0', paddingTop: '12px', fontSize: '0.82rem', color: '#005BB5', fontWeight: 600 }}>
-              Result: 15+ hours/week saved for Founder + ₹1.4 Cr debt refinanced at lower rate
-            </div>
-          </div>
-        </div>
-
-        {/* Action Callout */}
-        <div
-          style={{
-            marginTop: '44px',
-            textAlign: 'center',
-            background: '#ffffff',
-            border: '2px solid #BFDBFE',
-            borderRadius: '16px',
-            padding: '32px',
-            boxShadow: '0 6px 24px rgba(0, 51, 102, 0.06)',
-          }}
-        >
-          <h3 style={{ fontSize: '1.5rem', marginBottom: '8px', color: '#003366' }}>
-            Ready to Shift from Financial Anxiety to Predictable Growth?
-          </h3>
-          <p style={{ color: '#475569', fontSize: '0.95rem', marginBottom: '20px' }}>
-            Reserve a confidential strategic consultation with Finkasha financial leadership today.
-          </p>
-          <button onClick={onOpenBooking} className="btn btn-primary btn-lg">
-            <span>Book Your Strategic Financial Consultation</span>
-            <span>⚡</span>
-          </button>
         </div>
       </div>
 

@@ -7,28 +7,28 @@ export default function FAQSection() {
 
   const faqs = [
     {
-      q: 'How do you protect the confidentiality of our sensitive financial statements and turnover data?',
-      a: 'We operate under strict institutional confidentiality standards. Before accessing any sensitive financial models, balance sheets, or ledger records, Finkasha signs a legally binding Non-Disclosure Agreement (NDA). Your proprietary financial information is stored under bank-grade encryption protocols and is never disclosed to competitors, vendors, or external parties.',
+      q: 'Will My Business & Financial Information Stay Confidential?',
+      a: 'Yes. Your business and financial information is treated as confidential and is used only for the work being discussed with you. An NDA can also be signed before detailed financial information is shared, where required.',
     },
     {
-      q: 'How is a Fractional / Virtual CFO different from our current practicing Chartered Accountant (CA)?',
-      a: 'Your practicing CA focuses primarily on historical statutory compliance—filing GST, TDS, and preparing tax returns looking in the rearview mirror. Finkasha’s Fractional CFO functions as your forward-looking financial navigator: establishing rolling cash flow forecasts, plugging operational leakages, optimizing working capital, negotiating debt lines, and providing C-suite strategic clarity. We work in complete harmony with your existing accounts team and external CAs.',
+      q: 'How Does Finkasha Work With My Accounting And Finance Department?',
+      a: 'Your accounting and finance department continues handling accounting, taxation, compliance and its existing responsibilities. Finkasha works alongside your team to help you understand the numbers, manage cash, plan ahead and use financial information for business decisions.',
     },
     {
-      q: 'What does the Paid 1-on-1 Strategic Financial Consultation entail?',
-      a: 'The Paid Consultation is an intensive, confidential 60-to-90-minute strategic deep-dive for Business Owners, corporate CFOs, and practicing CAs. Prior to the session, we review your high-level financial metrics. During the session, we identify specific working capital bottlenecks, diagnostic leakages, margin slippages, and deliver a concrete 90-day action roadmap.',
+      q: 'What Happens In The 1 on 1 Executive Finance Session?',
+      a: 'It is a focused 60–90-minute conversation about your business, current financial concerns and the decisions you are trying to make. We help you understand what may need attention and what areas you should look at more closely next. The session is ₹2,000 + GST.',
     },
     {
-      q: 'Our business is already generating ₹20 Cr – ₹50 Cr+ turnover. Why do we need this now?',
-      a: 'At ₹20 Cr to ₹50 Cr+ turnover, operational complexity multiplies. A minor 2% cash leakage or a 20-day extension in debtor collection (DSO) can trap ₹50 Lakhs to ₹1.5 Crores in non-productive working capital, causing cash flow panic despite apparent paper profits. Finkasha transforms this hidden fragility into predictable, bankable liquidity.',
+      q: 'Our Business Is Already Doing Well. Why Do We Need Financial Management Support?',
+      a: 'As the business grows, more money gets blocked in customer payments, stock, salaries, suppliers, loans and expansion. Good sales do not always mean enough cash is available when the business needs it. Better financial management helps you understand these areas before they become bigger problems.',
     },
     {
-      q: 'Do you work with enterprises outside of Maharashtra or across India?',
-      a: 'Yes. While Finkasha Services Private Limited is registered in Nashik, Maharashtra, our Fractional CFO and strategic financial advisory models operate seamlessly across India. We conduct executive reviews through secure encrypted video suites and on-site executive quarterly strategy sessions for manufacturing and trading clients.',
+      q: 'Can Finkasha Work With Businesses Anywhere In India?',
+      a: 'Yes. We work with businesses across India. Most reviews and discussions can be conducted online, and in-person meetings can be considered where the engagement requires them.',
     },
     {
-      q: 'How soon can we expect tangible financial results or positive ROI?',
-      a: 'In over 40+ corporate transformations, cash leakages and working capital traps are typically identified within the first 30 days of the diagnostic phase. Tangible liquidity improvements—such as shortened collection cycles, cost rationalization, and bank line savings—routinely pay for the entire advisory engagement within 90 days.',
+      q: 'How Soon Will We Start Seeing Useful Changes?',
+      a: 'That depends on the issues in your business and how quickly agreed actions are implemented. Some financial gaps can become visible quite early, while improvements in collections, costs, working capital or planning may take longer. We focus on identifying the right issues, setting priorities and reviewing progress — not promising a fixed financial result.',
     },
   ];
 
@@ -36,10 +36,10 @@ export default function FAQSection() {
     <section id="faq" className="section" style={{ backgroundColor: '#F8FAFC' }}>
       <div className="container" style={{ maxWidth: '880px' }}>
         <div className="section-title-wrap">
-          <div className="badge">Clarity & Assurance</div>
+          <div className="badge">COMMON QUESTIONS</div>
           <h2 className="section-title">Frequently Asked Questions</h2>
           <p className="section-subtitle">
-            Everything you need to know about Finkasha&apos;s Fractional CFO advisory, paid consultations, and institutional data governance.
+            Simple answers to the questions business owners usually ask before working with Finkasha.
           </p>
         </div>
 

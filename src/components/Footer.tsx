@@ -25,7 +25,7 @@ export default function Footer({ onOpenBooking }: FooterProps) {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: '1.4fr 1fr 1fr 1.2fr',
+            gridTemplateColumns: 'minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.2fr)',
             gap: '36px',
             marginBottom: '50px',
           }}
@@ -33,7 +33,7 @@ export default function Footer({ onOpenBooking }: FooterProps) {
         >
           {/* Brand & Corporate Overview */}
           <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
+            <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }} aria-label="Finkasha home">
               <div
                 style={{
                   position: 'relative',
@@ -43,6 +43,7 @@ export default function Footer({ onOpenBooking }: FooterProps) {
                   overflow: 'hidden',
                   background: '#fff',
                   border: '1px solid #BFDBFE',
+                  flexShrink: 0,
                 }}
               >
                 <Image
@@ -61,10 +62,10 @@ export default function Footer({ onOpenBooking }: FooterProps) {
                   FINKASHA SERVICES PRIVATE LIMITED
                 </div>
               </div>
-            </div>
+            </Link>
 
             <p style={{ color: '#CBD5E1', fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '16px' }}>
-              Empowering ₹5 Cr – ₹50 Cr+ enterprises and founders across Manufacturing, Trading, and Services with Fractional CFO leadership, working capital optimization, and institutional financial management consultancy.
+              Finkasha helps ₹5 Cr–₹50 Cr manufacturing, trading and service businesses understand their numbers, manage cash and make better business decisions.
             </p>
 
             <div style={{ display: 'flex', gap: '8px', alignItems: 'center', flexWrap: 'wrap' }}>
@@ -77,49 +78,49 @@ export default function Footer({ onOpenBooking }: FooterProps) {
             </div>
           </div>
 
-          {/* Strategic Solutions */}
-          <div>
+          {/* Services & Resources */}
+          <nav aria-label="Footer services and resources">
             <h4 style={{ fontSize: '1rem', color: '#fff', marginBottom: '18px', fontWeight: 700 }}>
-              Advisory Solutions
+              Services & Resources
             </h4>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '0.88rem' }}>
               <li>
-                <Link href="/services#fractional-cfo" style={{ color: '#CBD5E1' }} className="footer-link">
-                  Fractional / Virtual CFO
+                <Link href="/#virtual-cfo" style={{ color: '#CBD5E1' }} className="footer-link">
+                  Virtual CFO & Financial Management
                 </Link>
               </li>
               <li>
-                <Link href="/services#cash-leakage" style={{ color: '#CBD5E1' }} className="footer-link">
-                  Cash Flow & Working Capital
+                <Link href="/#financial-analysis" style={{ color: '#CBD5E1' }} className="footer-link">
+                  Financial Analysis, Dashboards & Planning
                 </Link>
               </li>
               <li>
-                <Link href="/services#paid-consultancy" style={{ color: '#CBD5E1' }} className="footer-link">
-                  Paid 1-on-1 Consultation
+                <Link href="/#growth-planning" style={{ color: '#CBD5E1' }} className="footer-link">
+                  Business Growth & Expansion Planning
                 </Link>
               </li>
               <li>
-                <Link href="/services#cfo-ca-advisory" style={{ color: '#CBD5E1' }} className="footer-link">
-                  Advisory for CFOs & CAs
+                <Link href="/#executive-finance-session" style={{ color: '#CBD5E1' }} className="footer-link">
+                  1 on 1 Executive Finance Session
                 </Link>
               </li>
               <li>
-                <Link href="/services#financial-planning" style={{ color: '#CBD5E1' }} className="footer-link">
-                  Financial Planning & MIS
+                <Link href="/#case-studies" style={{ color: '#CBD5E1' }} className="footer-link">
+                  Case Studies
                 </Link>
               </li>
               <li>
-                <Link href="/services#compliance-advisory" style={{ color: '#CBD5E1' }} className="footer-link">
-                  Compliance & Business Advisory
+                <Link href="/#faq" style={{ color: '#CBD5E1' }} className="footer-link">
+                  Common Questions
                 </Link>
               </li>
             </ul>
-          </div>
+          </nav>
 
-          {/* Legal & Compliance */}
-          <div>
+          {/* Policies & Terms */}
+          <nav aria-label="Footer policies and terms">
             <h4 style={{ fontSize: '1rem', color: '#fff', marginBottom: '18px', fontWeight: 700 }}>
-              Legal & Compliance
+              Policies & Terms
             </h4>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '0.88rem' }}>
               <li>
@@ -129,17 +130,17 @@ export default function Footer({ onOpenBooking }: FooterProps) {
               </li>
               <li>
                 <Link href="/privacy" style={{ color: '#93C5FD', fontWeight: 600 }} className="footer-link">
-                  Privacy Policy (DPDP Act)
+                  Privacy Policy
                 </Link>
               </li>
               <li>
                 <Link href="/terms#nda" style={{ color: '#CBD5E1' }} className="footer-link">
-                  Non-Disclosure (NDA) Protocol
+                  Confidentiality & NDA
                 </Link>
               </li>
               <li>
                 <Link href="/terms#refund" style={{ color: '#CBD5E1' }} className="footer-link">
-                  Consultation Booking Terms
+                  Session Booking Terms
                 </Link>
               </li>
               <li>
@@ -148,7 +149,7 @@ export default function Footer({ onOpenBooking }: FooterProps) {
                 </Link>
               </li>
             </ul>
-          </div>
+          </nav>
 
           {/* Office Address & Executive Desk (Matching finkasha.com) */}
           <div>
@@ -181,10 +182,16 @@ export default function Footer({ onOpenBooking }: FooterProps) {
                 <button
                   onClick={onOpenBooking}
                   className="btn btn-secondary btn-sm"
-                  style={{ width: '100%', borderColor: '#BFDBFE', color: '#003366', backgroundColor: '#FFFFFF', marginTop: '4px' }}
+                  style={{ width: '100%', whiteSpace: 'normal', padding: '12px 16px', fontSize: '0.9rem', fontWeight: 700, borderColor: '#BFDBFE', color: '#003366', backgroundColor: '#FFFFFF', marginTop: '4px' }}
                 >
-                  Book Free Consultation
+                  Book 1 on 1 Executive Finance Session →
                 </button>
+                <p style={{ color: '#ffffff', fontSize: '1.05rem', fontWeight: 700, textAlign: 'center', marginTop: '10px' }}>
+                  ₹2,000 + GST
+                </p>
+                <p style={{ color: '#CBD5E1', fontSize: '0.82rem', textAlign: 'center', marginTop: '4px' }}>
+                  60–90 minutes · Confidential discussion
+                </p>
               </div>
             </div>
           </div>
@@ -219,7 +226,7 @@ export default function Footer({ onOpenBooking }: FooterProps) {
           <div>
             © {new Date().getFullYear()} Finkasha Services Private Limited. All rights reserved.
           </div>
-          <div style={{ display: 'flex', gap: '20px' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px 20px' }}>
             <Link href="/terms" style={{ color: '#CBD5E1' }} className="footer-link">
               Terms of Service
             </Link>

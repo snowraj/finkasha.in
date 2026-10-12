@@ -137,6 +137,7 @@ export default function TermsPage() {
 
           {/* Section 4: Non-Disclosure Agreement */}
           <section
+            id="nda"
             style={{
               background: '#F0F5FB',
               border: '1.5px solid #BFDBFE',
@@ -167,7 +168,7 @@ export default function TermsPage() {
           </section>
 
           {/* Section 5: Paid Consultations */}
-          <section>
+          <section id="refund">
             <h2 style={{ fontSize: '1.35rem', color: '#003366', marginBottom: '10px' }}>
               5. Paid Strategic Consultations: Scheduling, Fees & Cancellation
             </h2>

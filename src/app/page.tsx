@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import CashLeakageCalculator from '@/components/CashLeakageCalculator';
 import TransformationMatrix from '@/components/TransformationMatrix';
+import CaseStudies from '@/components/CaseStudies';
 
 import FAQSection from '@/components/FAQSection';
 import BookingModal from '@/components/BookingModal';
@@ -280,16 +281,17 @@ export default function Home() {
       <section id="services" className="section" style={{ backgroundColor: '#ffffff' }}>
         <div className="container">
           <div className="section-title-wrap">
-            <div className="badge">High-Impact Solutions</div>
-            <h2 className="section-title">Institutional Financial Architecture</h2>
+            <div className="badge">HOW FINKASHA HELPS</div>
+            <h2 className="section-title">Better Control Of Your Business Finances</h2>
             <p className="section-subtitle">
-              Tailored specifically for businesses generating ₹5 Cr to ₹50 Cr+ turnover, plus direct strategic advisory for in-house CFOs and Chartered Accountants.
+              For ₹5 Cr–₹50 Cr manufacturing, trading and service businesses that want clearer numbers, better cash control and more confidence while making important business decisions.
             </p>
           </div>
 
           <div className="grid-3" style={{ marginBottom: '32px' }}>
             {/* Offering 1: Virtual CFO */}
             <div
+              id="virtual-cfo"
               className="glass-card"
               style={{
                 padding: '36px 28px',
@@ -305,41 +307,50 @@ export default function Home() {
                   Pillar 01
                 </div>
                 <h3 style={{ fontSize: '1.45rem', marginBottom: '10px', color: '#003366' }}>
-                  Virtual / Fractional CFO
+                  Virtual CFO & Financial Management
                 </h3>
                 <p style={{ color: '#475569', fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '20px' }}>
-                  Institutional financial navigation without the ₹1 Crore executive payroll overhead.
+                  Ongoing financial review and guidance to help you understand where your cash is going, what needs attention and what decisions should be planned ahead.
                 </p>
                 <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '0.88rem', color: '#0F172A', marginBottom: '28px' }}>
                   <li style={{ display: 'flex', gap: '8px' }}>
                     <span style={{ color: '#005BB5', fontWeight: 700 }}>✓</span>
-                    <span>13-Week rolling cash flow forecasting models</span>
+                    <span><strong>Cash Flow Management</strong> — understand expected money coming in, payments going out and periods when cash may be low.</span>
                   </li>
                   <li style={{ display: 'flex', gap: '8px' }}>
                     <span style={{ color: '#005BB5', fontWeight: 700 }}>✓</span>
-                    <span>Plugging operational & vendor cash leakages</span>
+                    <span><strong>Working Capital Review</strong> — identify money blocked, stuck or tied up in customer payments, stock and day-to-day operations.</span>
                   </li>
                   <li style={{ display: 'flex', gap: '8px' }}>
                     <span style={{ color: '#005BB5', fontWeight: 700 }}>✓</span>
-                    <span>Monthly Executive MIS & gross margin dashboards</span>
+                    <span><strong>Collections & Payment Planning</strong> — improve the way customer collections, supplier payments and upcoming commitments are managed.</span>
                   </li>
                   <li style={{ display: 'flex', gap: '8px' }}>
                     <span style={{ color: '#005BB5', fontWeight: 700 }}>✓</span>
-                    <span>Working capital (DSO/CCC) compression & debt strategy</span>
+                    <span><strong>Borrowing & Debt Review</strong> — understand existing loans, CC/OD utilisation, repayment commitments and future borrowing requirements.</span>
+                  </li>
+                  <li style={{ display: 'flex', gap: '8px' }}>
+                    <span style={{ color: '#005BB5', fontWeight: 700 }}>✓</span>
+                    <span><strong>Cost & Margin Review</strong> — identify where costs are increasing and how they may be affecting the profitability of the business.</span>
+                  </li>
+                  <li style={{ display: 'flex', gap: '8px' }}>
+                    <span style={{ color: '#005BB5', fontWeight: 700 }}>✓</span>
+                    <span><strong>Monthly Management Review</strong> — regularly discuss what changed, why it changed, what needs attention and what action should come next.</span>
                   </li>
                 </ul>
               </div>
               <button
                 onClick={() => openBooking('₹20 Cr - ₹50 Cr', 'Virtual / Fractional CFO Retainer')}
                 className="btn btn-primary"
-                style={{ width: '100%' }}
+                style={{ width: '100%', whiteSpace: 'normal' }}
               >
-                Discuss Fractional CFO
+                Explore Virtual CFO & Financial Management →
               </button>
             </div>
 
             {/* Offering 2: Financial Planning & MIS */}
             <div
+              id="financial-analysis"
               className="glass-card"
               style={{
                 padding: '36px 28px',
@@ -352,41 +363,50 @@ export default function Home() {
               <div>
                 <div className="badge" style={{ marginBottom: '14px' }}>Pillar 02</div>
                 <h3 style={{ fontSize: '1.45rem', marginBottom: '10px', color: '#003366' }}>
-                  Financial Planning & MIS
+                  Financial Analysis, Dashboards & Planning
                 </h3>
                 <p style={{ color: '#475569', fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '20px' }}>
-                  Build real-time decision-making intelligence for your leadership team.
+                  Turn your business numbers into clear reports, future plans and better decisions.
                 </p>
                 <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '0.88rem', color: '#0F172A', marginBottom: '28px' }}>
                   <li style={{ display: 'flex', gap: '8px' }}>
                     <span style={{ color: '#005BB5', fontWeight: 700 }}>✓</span>
-                    <span>Monthly Executive MIS & gross margin dashboards</span>
+                    <span><strong>Management Dashboards</strong> — see sales, margins, cash, receivables, expenses and key business numbers in one place.</span>
                   </li>
                   <li style={{ display: 'flex', gap: '8px' }}>
                     <span style={{ color: '#005BB5', fontWeight: 700 }}>✓</span>
-                    <span>Product-wise & segment-wise P&L visibility</span>
+                    <span><strong>Business & Profitability Analysis</strong> — understand which products, customers, branches or business areas are performing well.</span>
                   </li>
                   <li style={{ display: 'flex', gap: '8px' }}>
                     <span style={{ color: '#005BB5', fontWeight: 700 }}>✓</span>
-                    <span>Annual budgeting, variance analysis & reforecasting</span>
+                    <span><strong>Budgeting</strong> — plan income, expenses and cash requirements before the year or quarter begins.</span>
                   </li>
                   <li style={{ display: 'flex', gap: '8px' }}>
                     <span style={{ color: '#005BB5', fontWeight: 700 }}>✓</span>
-                    <span>KPI dashboards & management reporting frameworks</span>
+                    <span><strong>Forecasting</strong> — estimate what sales, costs and cash requirements may look like in the coming months.</span>
+                  </li>
+                  <li style={{ display: 'flex', gap: '8px' }}>
+                    <span style={{ color: '#005BB5', fontWeight: 700 }}>✓</span>
+                    <span><strong>Financial Modelling</strong> — test important business decisions such as expansion, machinery, hiring, borrowing or pricing changes before committing money.</span>
+                  </li>
+                  <li style={{ display: 'flex', gap: '8px' }}>
+                    <span style={{ color: '#005BB5', fontWeight: 700 }}>✓</span>
+                    <span><strong>Budget vs Actual Review</strong> — compare what you planned with what actually happened and understand the reason for the difference.</span>
                   </li>
                 </ul>
               </div>
               <button
                 onClick={() => openBooking('₹20 Cr - ₹50 Cr', 'Financial Planning & MIS Advisory')}
                 className="btn btn-secondary"
-                style={{ width: '100%' }}
+                style={{ width: '100%', whiteSpace: 'normal' }}
               >
-                Explore Financial Planning
+                Explore Financial Analysis & Planning →
               </button>
             </div>
 
             {/* Offering 3: Compliance & Strategic Advisory */}
             <div
+              id="growth-planning"
               className="glass-card"
               style={{
                 padding: '36px 28px',
@@ -399,42 +419,51 @@ export default function Home() {
               <div>
                 <div className="badge" style={{ marginBottom: '14px' }}>Pillar 03</div>
                 <h3 style={{ fontSize: '1.45rem', marginBottom: '10px', color: '#003366' }}>
-                  Compliance & Business Finance Advisory
+                  Business Growth & Expansion Planning
                 </h3>
                 <p style={{ color: '#475569', fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '20px' }}>
-                  Strategic guidance on regulatory compliance, business structuring, and capital decisions.
+                  Understand how much money your next stage of growth may need, where that money can come from and how expansion may affect the rest of the business.
                 </p>
                 <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '0.88rem', color: '#0F172A', marginBottom: '28px' }}>
                   <li style={{ display: 'flex', gap: '8px' }}>
                     <span style={{ color: '#005BB5', fontWeight: 700 }}>✓</span>
-                    <span>GST, TDS & statutory compliance structuring</span>
+                    <span><strong>Expansion Planning</strong> — estimate the money required for a new branch, factory, machinery, warehouse, capacity increase or other major growth plan.</span>
                   </li>
                   <li style={{ display: 'flex', gap: '8px' }}>
                     <span style={{ color: '#005BB5', fontWeight: 700 }}>✓</span>
-                    <span>Bank CC/OD limit optimization & debt strategy</span>
+                    <span><strong>Funding Planning</strong> — understand how much can come from internal cash, loans, CC/OD or other business funding sources.</span>
                   </li>
                   <li style={{ display: 'flex', gap: '8px' }}>
                     <span style={{ color: '#005BB5', fontWeight: 700 }}>✓</span>
-                    <span>Business expansion & capex feasibility analysis</span>
+                    <span><strong>Working Capital Impact</strong> — estimate how much additional money may get blocked in stock, customer payments and day-to-day operations as the business grows.</span>
                   </li>
                   <li style={{ display: 'flex', gap: '8px' }}>
                     <span style={{ color: '#005BB5', fontWeight: 700 }}>✓</span>
-                    <span>Cost rationalization & pricing strategy advisory</span>
+                    <span><strong>CapEx & Investment Review</strong> — understand the financial impact of buying machinery, increasing capacity or making other major business investments.</span>
+                  </li>
+                  <li style={{ display: 'flex', gap: '8px' }}>
+                    <span style={{ color: '#005BB5', fontWeight: 700 }}>✓</span>
+                    <span><strong>Break-Even & Scenario Analysis</strong> — understand what sales, margins and cash flow may be required for the expansion to support itself.</span>
+                  </li>
+                  <li style={{ display: 'flex', gap: '8px' }}>
+                    <span style={{ color: '#005BB5', fontWeight: 700 }}>✓</span>
+                    <span><strong>Growth Decision Review</strong> — compare different options before committing money and understand how each may affect cash, costs and profitability.</span>
                   </li>
                 </ul>
               </div>
               <button
                 onClick={() => openBooking('₹20 Cr - ₹50 Cr', 'Compliance & Business Finance Advisory')}
                 className="btn btn-secondary"
-                style={{ width: '100%' }}
+                style={{ width: '100%', whiteSpace: 'normal' }}
               >
-                Explore Business Advisory
+                Explore Business Growth & Expansion Planning →
               </button>
             </div>
           </div>
 
           {/* Offering 4: Dedicated Highlight for Paid Consultancy */}
           <div
+            id="executive-finance-session"
             className="glass-card"
             style={{
               padding: '36px 40px',
@@ -448,36 +477,34 @@ export default function Home() {
           >
             <div>
               <div className="badge" style={{ marginBottom: '10px', backgroundColor: '#003366', color: '#fff', borderColor: '#003366' }}>
-                ⭐ Executive Advisory Service
+                1 ON 1 EXECUTIVE FINANCE SESSION
               </div>
               <h3 style={{ fontSize: '1.75rem', marginBottom: '10px', color: '#003366' }}>
-                Paid 1-on-1 Strategic Financial Consultation
+                Talk Through The Financial Decisions That Matter To Your Business
               </h3>
               <p style={{ color: '#475569', fontSize: '0.95rem', lineHeight: '1.6', marginBottom: '16px' }}>
-                Designed specifically for <strong>Business Owners</strong>, <strong>in-house corporate CFOs</strong>, and <strong>practicing Chartered Accountants (CAs)</strong> who need an institutional-grade second opinion, cash leakage audit review, or complex debt structuring roadmap.
+                A focused 60–90-minute discussion to understand your current financial concerns, where cash may be blocked, and what deserves your attention before making the next important business decision.
               </p>
               <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', fontSize: '0.85rem', color: '#0F172A', fontWeight: 600 }}>
-                <span>✓ 60-90 Min Intensive Private Session</span>
-                <span>✓ Direct with Senior Advisory Leadership</span>
-                <span>✓ Actionable 90-Day Roadmap</span>
-                <span>✓ Strict NDA Protected</span>
+                <span>✓ 60–90-Minute 1 on 1 Session</span>
+                <span>✓ Clear Financial Areas To Focus On Next</span>
+                <span>✓ Confidential Discussion</span>
               </div>
             </div>
 
             <div style={{ textAlign: 'center' }}>
               <div style={{ fontSize: '0.85rem', color: '#003366', fontWeight: 700, marginBottom: '8px' }}>
-                LIMITED MONTHLY CONSULTATION SLOTS
+                START WITH A 1 ON 1 DISCUSSION
               </div>
               <button
                 onClick={() => openBooking('₹20 Cr - ₹50 Cr', 'Paid 1-on-1 Strategic Financial Consultation')}
                 className="btn btn-primary btn-lg"
-                style={{ width: '100%', padding: '16px 28px' }}
+                style={{ width: '100%', padding: '16px 28px', whiteSpace: 'normal' }}
               >
-                <span>Reserve Your Consultation Slot</span>
-                <span>⚡</span>
+                Book 1 on 1 Executive Finance Session →
               </button>
-              <div style={{ fontSize: '0.78rem', color: '#64748B', marginTop: '8px' }}>
-                Includes pre-session diagnostic review
+              <div style={{ fontSize: '1.25rem', fontWeight: 700, color: '#003366', marginTop: '16px' }}>
+                ₹2,000 + GST
               </div>
             </div>
           </div>
@@ -488,50 +515,49 @@ export default function Home() {
       <section className="section" style={{ backgroundColor: '#F8FAFC', borderTop: '1px solid #E2E8F0' }}>
         <div className="container">
           <div className="section-title-wrap">
-            <div className="badge">Our Foundation</div>
+            <div className="badge">WHAT YOU CAN EXPECT FROM US</div>
             <h2 className="section-title">
-              Why Choose Finkasha — <br />
-              The Foundation of Everything We Do
+              Why Business Owners Choose To Work With Finkasha
             </h2>
             <p className="section-subtitle">
-              At Finkasha, our core values are the cornerstone of our advisory practice, ensuring unmatched transparency, client empathy, and institutional excellence.
+              We believe good financial advice should be clear, practical and easy to understand. Here is what you can expect when you work with us.
             </p>
           </div>
 
           <div className="grid-3">
             {[
               {
-                title: 'Truthful Communication',
-                desc: 'We communicate openly and honestly, building enduring trust through total transparency at every step.',
+                title: 'Clear & Honest Communication',
+                desc: 'We explain things clearly, tell you what we see, and avoid hiding behind complicated financial language.',
                 icon: '💬',
               },
               {
-                title: 'Client-First with Compassion',
-                desc: 'We listen with empathy and tailor solutions that truly reflect each enterprise and promoter’s unique journey.',
+                title: 'Your Business Comes First',
+                desc: 'We first understand your business, your concerns and your goals before suggesting what needs to be done.',
                 icon: '🤝',
               },
               {
-                title: 'Success Through Collaboration',
-                desc: 'We believe the best outcomes come from working together with our clients, in-house finance teams, and partners.',
+                title: 'We Work With Your Existing Team',
+                desc: 'Your accountant, CA and finance team continue doing their work. We work alongside them to help management understand and use the numbers better.',
                 icon: '🌐',
               },
               {
-                title: 'Excellence in Service',
-                desc: 'We strive for exceptional analytical quality, institutional standards, and continuous improvement in everything we deliver.',
+                title: 'Quality In Every Review',
+                desc: 'We take the time to review the numbers properly, ask the right questions and give you information that is useful for decision-making.',
                 icon: '⭐',
               },
               {
-                title: 'Accountability in Action',
-                desc: 'We take full ownership of our strategic recommendations, staying true to our commitments and measurable ROI.',
+                title: 'We Take Ownership Of Our Work',
+                desc: 'If we raise an issue or recommend something, we explain why it matters and continue reviewing it with you.',
                 icon: '🛡️',
               },
               {
-                title: 'Educative Leadership',
-                desc: 'Our mission is to help you “Learn once, benefit forever”—building enduring financial competence across your leadership.',
+                title: 'We Help You Understand, Not Just Advise',
+                desc: 'Our goal is to help you understand your own business numbers better, so you can make more informed decisions even beyond our meetings.',
                 icon: '📚',
               },
             ].map((val, idx) => (
-              <div key={idx} className="glass-card" style={{ padding: '28px', border: '1px solid #D9E4F0' }}>
+              <div key={idx} className="glass-card" style={{ padding: '28px', border: '1px solid #D9E4F0', textAlign: 'center' }}>
                 <div style={{ fontSize: '2rem', marginBottom: '12px' }}>{val.icon}</div>
                 <h3 style={{ fontSize: '1.2rem', color: '#003366', marginBottom: '8px' }}>{val.title}</h3>
                 <p style={{ fontSize: '0.88rem', color: '#475569', lineHeight: '1.6' }}>{val.desc}</p>
@@ -542,8 +568,10 @@ export default function Home() {
       </section>
 
       {/* 7. BEFORE VS AFTER TRANSFORMATION MATRIX */}
-      <TransformationMatrix onOpenBooking={() => openBooking()} />
+      <TransformationMatrix />
 
+      {/* 8. CASE STUDIES */}
+      <CaseStudies onOpenBooking={() => openBooking()} />
 
       {/* 9. FOUNDER & PHILOSOPHY: "LEARN ONCE, BENEFIT FOREVER" */}
       <section className="section" style={{ backgroundColor: '#F0F5FB', borderTop: '1px solid #E2E8F0', borderBottom: '1px solid #E2E8F0' }}>
@@ -594,24 +622,27 @@ export default function Home() {
             {/* Philosophy Copy */}
             <div>
               <div className="badge" style={{ marginBottom: '14px' }}>
-                Institutional Philosophy
+                OUR APPROACH
               </div>
               <h2 style={{ fontSize: '2.1rem', marginBottom: '16px', lineHeight: '1.3', color: '#003366' }}>
                 &ldquo;Learn Once, Benefit Forever.&rdquo;
               </h2>
               <p style={{ color: '#475569', fontSize: '0.98rem', lineHeight: '1.75', marginBottom: '18px' }}>
-                We believe the biggest tragedy in Indian business is when ambitious founders build a ₹20 Cr to ₹50 Cr enterprise through sheer grit, only to see their margins vanish into cash leakage and chaotic working capital traps.
+                Business owners work hard to grow their companies. But as the business gets bigger, money can get blocked in customer payments, stock, rising costs and day-to-day operations.
               </p>
-              <p style={{ color: '#334155', fontSize: '0.95rem', lineHeight: '1.75', marginBottom: '24px' }}>
-                Traditional accounting only records history. At Finkasha, our mission is educative and strategic: we empower you with the forward-looking financial architecture, cash forecasting disciplines, and institutional governance required to build an enduring, profitable corporate powerhouse.
+              <p style={{ color: '#334155', fontSize: '0.95rem', lineHeight: '1.75', marginBottom: '18px' }}>
+                Finkasha helps you go beyond simply looking at past numbers. We help you understand what the numbers mean, what needs attention, and what you should plan for next.
+              </p>
+              <p style={{ color: '#003366', fontSize: '0.95rem', fontWeight: 600, lineHeight: '1.75', marginBottom: '24px' }}>
+                Our goal is simple: help business owners understand their finances better so they can make better decisions with greater clarity and confidence.
               </p>
 
               <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
-                <button onClick={() => openBooking()} className="btn btn-primary">
-                  Book a Consultation with Kamlesh ⚡
+                <button onClick={() => openBooking()} className="btn btn-primary" style={{ maxWidth: '100%', whiteSpace: 'normal' }}>
+                  Explore 1 on 1 Executive Finance Session →
                 </button>
-                <Link href="/services" className="btn btn-secondary">
-                  Explore Advisory Scope →
+                <Link href="/services" className="btn btn-secondary" style={{ maxWidth: '100%', whiteSpace: 'normal' }}>
+                  Explore Finkasha Services →
                 </Link>
               </div>
             </div>
@@ -633,7 +664,7 @@ export default function Home() {
       >
         <div className="container" style={{ textAlign: 'center' }}>
           <div className="badge" style={{ marginBottom: '16px', backgroundColor: 'rgba(255, 255, 255, 0.15)', color: '#93C5FD', borderColor: 'rgba(255, 255, 255, 0.2)' }}>
-            High-Converting Enterprise Advisory
+            READY TO TALK?
           </div>
           <h2
             style={{
@@ -644,7 +675,7 @@ export default function Home() {
               color: '#ffffff',
             }}
           >
-            Ready to Unlock Total Financial Clarity & Plug Cash Leakages?
+            Let’s Understand What Is Happening With Your Cash And Numbers.
           </h2>
           <p
             style={{
@@ -655,28 +686,17 @@ export default function Home() {
               lineHeight: '1.6',
             }}
           >
-            Schedule your confidential strategic session with Finkasha today. Protected by institutional non-disclosure standards.
+            Talk through your current financial concerns, where money may be blocked, and what deserves your attention before the next important business decision.
           </p>
 
           <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <button
               onClick={() => openBooking()}
               className="btn btn-secondary btn-lg"
-              style={{ backgroundColor: '#ffffff', color: '#003366', border: 'none', fontWeight: 800 }}
+              style={{ maxWidth: '100%', whiteSpace: 'normal', backgroundColor: '#ffffff', color: '#003366', border: 'none', fontWeight: 800 }}
             >
-              <span>Book Your Financial Consultation</span>
-              <span>⚡</span>
+              Book 1 on 1 Executive Finance Session →
             </button>
-            <a
-              href="https://wa.me/919684704101?text=Hello%20Finkasha,%20I%20would%20like%20to%20inquire%20about%20Fractional%20CFO%20services"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-secondary btn-lg"
-              style={{ borderColor: 'rgba(255, 255, 255, 0.4)', color: '#ffffff', backgroundColor: 'transparent' }}
-            >
-              <span>WhatsApp Direct Line</span>
-              <span>💬</span>
-            </a>
           </div>
         </div>
       </section>
