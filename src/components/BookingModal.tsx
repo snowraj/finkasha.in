@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useId, useState } from 'react';
 
 interface BookingModalProps {
   isOpen: boolean;
@@ -29,6 +29,23 @@ export default function BookingModal({
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const dialogTitleId = useId();
+
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') onClose();
+    };
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isOpen, onClose]);
 
   if (!isOpen) return null;
 
@@ -74,7 +91,7 @@ export default function BookingModal({
 
   return (
     <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+      <div className="modal-content" role="dialog" aria-modal="true" aria-labelledby={dialogTitleId} onClick={(e) => e.stopPropagation()}>
         {/* Close Button */}
         <button
           onClick={onClose}
@@ -82,8 +99,8 @@ export default function BookingModal({
             position: 'absolute',
             top: '20px',
             right: '20px',
-            width: '36px',
-            height: '36px',
+            width: '44px',
+            height: '44px',
             borderRadius: '50%',
             background: '#F1F5F9',
             display: 'flex',
@@ -102,11 +119,11 @@ export default function BookingModal({
         {!isSuccess ? (
           <div>
             {/* Header */}
-            <div style={{ marginBottom: '22px' }}>
+            <div style={{ marginBottom: '22px', paddingRight: '42px' }}>
               <div className="badge" style={{ marginBottom: '10px' }}>
                 ⭐ High-Clarity Consultation Booking
               </div>
-              <h3 style={{ fontSize: '1.6rem', marginBottom: '8px', color: '#003366' }}>
+              <h3 id={dialogTitleId} style={{ fontSize: '1.6rem', marginBottom: '8px', color: '#003366' }}>
                 Book Your Strategic Financial Consultation
               </h3>
               <p style={{ color: '#64748B', fontSize: '0.92rem', lineHeight: '1.5' }}>
@@ -160,13 +177,15 @@ export default function BookingModal({
                     <label className="form-label">Annual Revenue / Turnover Bracket *</label>
                     <div className="option-grid">
                       {['₹5 Cr - ₹10 Cr', '₹10 Cr - ₹20 Cr', '₹20 Cr - ₹50 Cr', '₹50 Cr+'].map((tier) => (
-                        <div
+                        <button
+                          type="button"
                           key={tier}
+                          aria-pressed={formData.turnover === tier}
                           className={`option-pill ${formData.turnover === tier ? 'active' : ''}`}
                           onClick={() => setFormData({ ...formData, turnover: tier })}
                         >
                           {tier}
-                        </div>
+                        </button>
                       ))}
                     </div>
                   </div>
@@ -175,13 +194,15 @@ export default function BookingModal({
                     <label className="form-label">Industry Domain *</label>
                     <div className="option-grid">
                       {['Manufacturing', 'Trading & Export', 'Services & Tech', 'Other Corporate'].map((ind) => (
-                        <div
+                        <button
+                          type="button"
                           key={ind}
+                          aria-pressed={formData.industry === ind}
                           className={`option-pill ${formData.industry === ind ? 'active' : ''}`}
                           onClick={() => setFormData({ ...formData, industry: ind })}
                         >
                           {ind}
-                        </div>
+                        </button>
                       ))}
                     </div>
                   </div>
@@ -195,13 +216,15 @@ export default function BookingModal({
                         'Existing CFO',
                         'Chartered Accountant (CA)',
                       ].map((r) => (
-                        <div
+                        <button
+                          type="button"
                           key={r}
+                          aria-pressed={formData.role === r}
                           className={`option-pill ${formData.role === r ? 'active' : ''}`}
                           onClick={() => setFormData({ ...formData, role: r })}
                         >
                           {r}
-                        </div>
+                        </button>
                       ))}
                     </div>
                   </div>
@@ -246,10 +269,14 @@ export default function BookingModal({
                           desc: 'Monthly MIS dashboards, P&L visibility, budgeting, variance analysis, and KPI frameworks.',
                         },
                       ].map((item) => (
-                        <div
+                        <button
+                          type="button"
                           key={item.id}
+                          aria-pressed={formData.primaryGoal === item.id}
                           onClick={() => setFormData({ ...formData, primaryGoal: item.id })}
                           style={{
+                            textAlign: 'left',
+                            width: '100%',
                             padding: '14px 16px',
                             borderRadius: '10px',
                             border: `1.5px solid ${
@@ -266,6 +293,7 @@ export default function BookingModal({
                               style={{
                                 width: '16px',
                                 height: '16px',
+                                flexShrink: 0,
                                 borderRadius: '50%',
                                 border: `2px solid ${formData.primaryGoal === item.id ? '#003366' : '#94A3B8'}`,
                                 display: 'flex',
@@ -280,7 +308,7 @@ export default function BookingModal({
                             <span style={{ fontWeight: 700, color: '#003366', fontSize: '0.95rem' }}>{item.title}</span>
                           </div>
                           <p style={{ fontSize: '0.84rem', color: '#475569', paddingLeft: '26px' }}>{item.desc}</p>
-                        </div>
+                        </button>
                       ))}
                     </div>
                   </div>
@@ -401,7 +429,7 @@ export default function BookingModal({
             >
               ✓
             </div>
-            <h3 style={{ fontSize: '1.75rem', marginBottom: '8px', color: '#003366' }}>Consultation Request Received</h3>
+            <h3 id={dialogTitleId} style={{ fontSize: '1.75rem', marginBottom: '8px', color: '#003366' }}>Consultation Request Received</h3>
             <p style={{ color: '#475569', fontSize: '0.95rem', lineHeight: '1.6', maxWidth: '460px', margin: '0 auto 20px auto' }}>
               Thank you, <strong>{formData.fullName}</strong>. Our senior financial advisory desk has prioritized your request for <strong>{formData.companyName}</strong>.
             </p>

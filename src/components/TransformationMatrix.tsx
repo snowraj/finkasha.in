@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import styles from './TransformationMatrix.module.css';
 
 export default function TransformationMatrix() {
   const comparisonItems = [
@@ -58,16 +59,13 @@ export default function TransformationMatrix() {
           {/* Header Row */}
           <div
             style={{
-              display: 'grid',
-              gridTemplateColumns: '1.2fr 1.4fr 1.4fr',
               background: '#002B54',
               color: '#ffffff',
-              padding: '18px 28px',
               fontWeight: 700,
               fontSize: '0.92rem',
               letterSpacing: '0.04em',
             }}
-            className="matrix-row matrix-header"
+            className={`${styles.row} ${styles.header}`}
           >
             <div style={{ color: '#93C5FD' }}>Area</div>
             <div style={{ color: '#6EE7B7', display: 'flex', alignItems: 'center', gap: '8px' }}>
@@ -83,23 +81,22 @@ export default function TransformationMatrix() {
             <div
               key={idx}
               style={{
-                display: 'grid',
-                gridTemplateColumns: '1.2fr 1.4fr 1.4fr',
-                padding: '20px 28px',
                 borderBottom:
                   idx === comparisonItems.length - 1 ? 'none' : '1px solid #E2E8F0',
                 fontSize: '0.92rem',
                 backgroundColor: idx % 2 === 0 ? '#ffffff' : '#F0F5FB',
               }}
-              className="matrix-row"
+              className={styles.row}
             >
               <div style={{ fontWeight: 700, color: '#003366', display: 'flex', alignItems: 'center' }}>
                 {item.domain}
               </div>
               <div style={{ color: '#0F172A', paddingRight: '20px', lineHeight: '1.6', fontWeight: 600 }}>
+                <span className={styles.label} style={{ color: '#005BB5' }}>With Finkasha</span>
                 {item.after}
               </div>
               <div style={{ color: '#64748B', paddingRight: '10px', lineHeight: '1.6' }}>
+                <span className={styles.label}>Without Structured Financial Management</span>
                 {item.before}
               </div>
             </div>
@@ -107,18 +104,6 @@ export default function TransformationMatrix() {
         </div>
       </div>
 
-      <style jsx>{`
-        @media (max-width: 850px) {
-          :global(.matrix-header) {
-            display: none !important;
-          }
-          :global(.matrix-row) {
-            grid-template-columns: 1fr !important;
-            gap: 12px !important;
-            padding: 18px 16px !important;
-          }
-        }
-      `}</style>
     </section>
   );
 }

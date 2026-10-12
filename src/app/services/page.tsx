@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import BookingModal from '@/components/BookingModal';
+import styles from './page.module.css';
 
 export default function ServicesPage() {
   const [bookingOpen, setBookingOpen] = useState(false);
@@ -122,7 +123,7 @@ export default function ServicesPage() {
               display: 'inline-flex',
               alignItems: 'center',
               gap: '8px',
-              color: '#00D09C',
+              color: '#005BB5',
               fontSize: '0.9rem',
               fontWeight: 600,
             }}
@@ -136,7 +137,7 @@ export default function ServicesPage() {
           <div className="badge badge-gold" style={{ marginBottom: '14px' }}>
             Institutional Financial Architecture
           </div>
-          <h1 className="section-title" style={{ fontSize: '2.8rem' }}>
+          <h1 className={`section-title ${styles.pageTitle}`}>
             Strategic Advisory Solutions for <br />
             <span className="text-gradient">₹5 Cr – ₹50 Cr+ Enterprises</span>
           </h1>
@@ -151,50 +152,45 @@ export default function ServicesPage() {
             <div
               key={srv.id}
               id={srv.id}
-              className="glass-card"
+              className={`glass-card ${styles.serviceCard}`}
               style={{
-                padding: '40px',
                 border: '1px solid rgba(148, 163, 184, 0.15)',
-                display: 'grid',
-                gridTemplateColumns: '1.2fr 1fr',
-                gap: '40px',
-                alignItems: 'center',
               }}
             >
               <div>
                 <span className="badge" style={{ fontSize: '0.75rem', marginBottom: '14px' }}>
                   {srv.badge}
                 </span>
-                <h2 style={{ fontSize: '1.85rem', marginBottom: '10px', color: '#fff' }}>
+                <h2 style={{ fontSize: '1.85rem', marginBottom: '10px', color: '#003366' }}>
                   {srv.title}
                 </h2>
-                <h3 style={{ fontSize: '1.05rem', color: '#00D09C', fontWeight: 600, marginBottom: '16px' }}>
+                <h3 style={{ fontSize: '1.05rem', color: '#005BB5', fontWeight: 600, marginBottom: '16px' }}>
                   {srv.subtitle}
                 </h3>
-                <p style={{ color: '#94A3B8', fontSize: '0.95rem', lineHeight: '1.7', marginBottom: '20px' }}>
+                <p style={{ color: '#475569', fontSize: '0.95rem', lineHeight: '1.7', marginBottom: '20px' }}>
                   {srv.description}
                 </p>
 
                 <div
                   style={{
-                    background: 'rgba(255, 255, 255, 0.02)',
-                    border: '1px solid rgba(148, 163, 184, 0.1)',
+                    background: '#F0F5FB',
+                    border: '1px solid #D9E4F0',
                     padding: '12px 16px',
                     borderRadius: '8px',
                     fontSize: '0.85rem',
-                    color: '#CBD5E1',
+                    color: '#334155',
                   }}
                 >
-                  <strong style={{ color: '#FBBF24' }}>Ideal For: </strong> {srv.forWhom}
+                  <strong style={{ color: '#003366' }}>Ideal For: </strong> {srv.forWhom}
                 </div>
               </div>
 
               <div
+                className={styles.scopeCard}
                 style={{
-                  background: 'rgba(11, 18, 34, 0.85)',
-                  border: '1px solid rgba(0, 208, 156, 0.25)',
+                  background: '#002B54',
+                  border: '1px solid rgba(147, 197, 253, 0.25)',
                   borderRadius: '14px',
-                  padding: '28px',
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'space-between',
@@ -208,7 +204,7 @@ export default function ServicesPage() {
                   <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '0.88rem' }}>
                     {srv.deliverables.map((del, dIdx) => (
                       <li key={dIdx} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', color: '#E2E8F0' }}>
-                        <span style={{ color: '#00D09C' }}>✓</span>
+                        <span style={{ color: '#93C5FD' }}>✓</span>
                         <span>{del}</span>
                       </li>
                     ))}
@@ -218,7 +214,7 @@ export default function ServicesPage() {
                 <div style={{ marginTop: '28px' }}>
                   <button
                     onClick={() => handleOpenBooking(srv.title)}
-                    className="btn btn-primary"
+                    className="btn btn-secondary"
                     style={{ width: '100%' }}
                   >
                     <span>Book Consultation for This Service</span>

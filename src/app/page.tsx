@@ -9,6 +9,7 @@ import CaseStudies from '@/components/CaseStudies';
 
 import FAQSection from '@/components/FAQSection';
 import BookingModal from '@/components/BookingModal';
+import styles from './page.module.css';
 
 export default function Home() {
   const [bookingOpen, setBookingOpen] = useState(false);
@@ -28,8 +29,8 @@ export default function Home() {
     <div style={{ backgroundColor: '#ffffff', color: '#0F172A' }}>
       {/* 1. HERO SECTION (Blue & White corporate theme matching finkasha.com) */}
       <section
+        className={styles.hero}
         style={{
-          padding: '80px 0 70px 0',
           position: 'relative',
           background: 'linear-gradient(180deg, #F0F5FB 0%, #FFFFFF 100%)',
           borderBottom: '1px solid #E2E8F0',
@@ -45,14 +46,14 @@ export default function Home() {
           </div>
 
           {/* Core Tagline matching finkasha.com */}
-          <div style={{ fontSize: '1.2rem', fontWeight: 700, color: '#005BB5', marginBottom: '10px', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+          <div className={styles.heroTagline} style={{ fontWeight: 700, color: '#005BB5', marginBottom: '10px', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
             UNDERSTAND YOUR CASH. GROW WITH CLARITY.
           </div>
 
           {/* Problem-Agitate Headline */}
           <h1
+            className={styles.heroTitle}
             style={{
-              fontSize: 'clamp(2.3rem, 5vw, 3.9rem)',
               fontWeight: 800,
               lineHeight: 1.18,
               maxWidth: '1000px',
@@ -62,7 +63,7 @@ export default function Home() {
             }}
           >
             Know Where Your Cash Is Going.{' '}
-            <br />
+            <br className={styles.heroBreak} />
             <span style={{ color: '#005BB5' }}>Make Better Decisions.</span> Grow With More Control.
           </h1>
 
@@ -81,11 +82,11 @@ export default function Home() {
 
           {/* Dual Action CTAs */}
           <div
+            className={styles.heroActions}
             style={{
               display: 'flex',
               gap: '16px',
               justifyContent: 'center',
-              alignItems: 'center',
               flexWrap: 'wrap',
               marginBottom: '48px',
             }}
@@ -110,9 +111,6 @@ export default function Home() {
           {/* Track Record & Proof Points Banner */}
           <div
             style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(4, 1fr)',
-              gap: '20px',
               maxWidth: '960px',
               margin: '0 auto',
               background: '#ffffff',
@@ -121,10 +119,10 @@ export default function Home() {
               padding: '24px 20px',
               boxShadow: '0 8px 30px rgba(0, 51, 102, 0.08)',
             }}
-            className="stats-strip"
+            className={styles.statsStrip}
           >
             <div>
-              <div style={{ fontSize: '2.2rem', fontWeight: 800, color: '#003366', fontFamily: 'var(--font-heading)' }}>
+              <div className={styles.statsValue} style={{ fontWeight: 800, color: '#003366', fontFamily: 'var(--font-heading)' }}>
                 40+
               </div>
               <div style={{ fontSize: '0.8rem', color: '#64748B', marginTop: '2px', textTransform: 'uppercase', letterSpacing: '0.04em', fontWeight: 600 }}>
@@ -132,7 +130,7 @@ export default function Home() {
               </div>
             </div>
             <div>
-              <div style={{ fontSize: '2.2rem', fontWeight: 800, color: '#005BB5', fontFamily: 'var(--font-heading)' }}>
+              <div className={styles.statsValue} style={{ fontWeight: 800, color: '#005BB5', fontFamily: 'var(--font-heading)' }}>
                 350+
               </div>
               <div style={{ fontSize: '0.8rem', color: '#64748B', marginTop: '2px', textTransform: 'uppercase', letterSpacing: '0.04em', fontWeight: 600 }}>
@@ -140,7 +138,7 @@ export default function Home() {
               </div>
             </div>
             <div>
-              <div style={{ fontSize: '2.2rem', fontWeight: 800, color: '#007ACC', fontFamily: 'var(--font-heading)' }}>
+              <div className={styles.statsValue} style={{ fontWeight: 800, color: '#007ACC', fontFamily: 'var(--font-heading)' }}>
                 ₹500 Cr+
               </div>
               <div style={{ fontSize: '0.8rem', color: '#64748B', marginTop: '2px', textTransform: 'uppercase', letterSpacing: '0.04em', fontWeight: 600 }}>
@@ -148,7 +146,7 @@ export default function Home() {
               </div>
             </div>
             <div>
-              <div style={{ fontSize: '2.2rem', fontWeight: 800, color: '#059669', fontFamily: 'var(--font-heading)' }}>
+              <div className={styles.statsValue} style={{ fontWeight: 800, color: '#059669', fontFamily: 'var(--font-heading)' }}>
                 100%
               </div>
               <div style={{ fontSize: '0.8rem', color: '#64748B', marginTop: '2px', textTransform: 'uppercase', letterSpacing: '0.04em', fontWeight: 600 }}>
@@ -292,9 +290,8 @@ export default function Home() {
             {/* Offering 1: Virtual CFO */}
             <div
               id="virtual-cfo"
-              className="glass-card"
+              className={`glass-card ${styles.serviceCard}`}
               style={{
-                padding: '36px 28px',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
@@ -351,9 +348,8 @@ export default function Home() {
             {/* Offering 2: Financial Planning & MIS */}
             <div
               id="financial-analysis"
-              className="glass-card"
+              className={`glass-card ${styles.serviceCard}`}
               style={{
-                padding: '36px 28px',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
@@ -407,9 +403,8 @@ export default function Home() {
             {/* Offering 3: Compliance & Strategic Advisory */}
             <div
               id="growth-planning"
-              className="glass-card"
+              className={`glass-card ${styles.serviceCard}`}
               style={{
-                padding: '36px 28px',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
@@ -464,28 +459,23 @@ export default function Home() {
           {/* Offering 4: Dedicated Highlight for Paid Consultancy */}
           <div
             id="executive-finance-session"
-            className="glass-card"
+            className={`glass-card ${styles.sessionCard}`}
             style={{
-              padding: '36px 40px',
               border: '2px solid #005BB5',
               background: '#F0F5FB',
-              display: 'grid',
-              gridTemplateColumns: '1.3fr 1fr',
-              gap: '32px',
-              alignItems: 'center',
             }}
           >
             <div>
               <div className="badge" style={{ marginBottom: '10px', backgroundColor: '#003366', color: '#fff', borderColor: '#003366' }}>
                 1 ON 1 EXECUTIVE FINANCE SESSION
               </div>
-              <h3 style={{ fontSize: '1.75rem', marginBottom: '10px', color: '#003366' }}>
+              <h3 className={styles.sessionTitle} style={{ marginBottom: '10px', color: '#003366' }}>
                 Talk Through The Financial Decisions That Matter To Your Business
               </h3>
               <p style={{ color: '#475569', fontSize: '0.95rem', lineHeight: '1.6', marginBottom: '16px' }}>
                 A focused 60–90-minute discussion to understand your current financial concerns, where cash may be blocked, and what deserves your attention before making the next important business decision.
               </p>
-              <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', fontSize: '0.85rem', color: '#0F172A', fontWeight: 600 }}>
+              <div className={styles.sessionBenefits} style={{ fontSize: '0.85rem', color: '#0F172A', fontWeight: 600 }}>
                 <span>✓ 60–90-Minute 1 on 1 Session</span>
                 <span>✓ Clear Financial Areas To Focus On Next</span>
                 <span>✓ Confidential Discussion</span>
@@ -577,24 +567,18 @@ export default function Home() {
       <section className="section" style={{ backgroundColor: '#F0F5FB', borderTop: '1px solid #E2E8F0', borderBottom: '1px solid #E2E8F0' }}>
         <div className="container">
           <div
-            className="glass-card"
+            className={`glass-card ${styles.approachCard}`}
             style={{
-              padding: '48px 44px',
               border: '2px solid #BFDBFE',
-              display: 'grid',
-              gridTemplateColumns: '1fr 1.3fr',
-              gap: '48px',
-              alignItems: 'center',
               backgroundColor: '#ffffff',
             }}
           >
             {/* Image / Graphic / Identity */}
             <div style={{ textAlign: 'center' }}>
               <div
+                className={styles.approachLogo}
                 style={{
                   position: 'relative',
-                  width: '180px',
-                  height: '180px',
                   margin: '0 auto 20px auto',
                   borderRadius: '16px',
                   overflow: 'hidden',
@@ -624,7 +608,7 @@ export default function Home() {
               <div className="badge" style={{ marginBottom: '14px' }}>
                 OUR APPROACH
               </div>
-              <h2 style={{ fontSize: '2.1rem', marginBottom: '16px', lineHeight: '1.3', color: '#003366' }}>
+              <h2 className={styles.approachTitle} style={{ marginBottom: '16px', lineHeight: '1.3', color: '#003366' }}>
                 &ldquo;Learn Once, Benefit Forever.&rdquo;
               </h2>
               <p style={{ color: '#475569', fontSize: '0.98rem', lineHeight: '1.75', marginBottom: '18px' }}>
@@ -637,7 +621,7 @@ export default function Home() {
                 Our goal is simple: help business owners understand their finances better so they can make better decisions with greater clarity and confidence.
               </p>
 
-              <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
+              <div className={styles.approachActions} style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
                 <button onClick={() => openBooking()} className="btn btn-primary" style={{ maxWidth: '100%', whiteSpace: 'normal' }}>
                   Explore 1 on 1 Executive Finance Session →
                 </button>
@@ -655,8 +639,8 @@ export default function Home() {
 
       {/* 11. FINAL CONVERSION BANNER */}
       <section
+        className={styles.finalBanner}
         style={{
-          padding: '75px 0 90px 0',
           position: 'relative',
           backgroundColor: '#002B54',
           color: '#ffffff',
@@ -667,8 +651,8 @@ export default function Home() {
             READY TO TALK?
           </div>
           <h2
+            className={styles.finalTitle}
             style={{
-              fontSize: 'clamp(2.1rem, 4vw, 3.2rem)',
               maxWidth: '850px',
               margin: '0 auto 18px auto',
               lineHeight: '1.2',
@@ -709,14 +693,6 @@ export default function Home() {
         initialChallenge={bookingChallenge}
       />
 
-      <style jsx>{`
-        @media (max-width: 800px) {
-          :global(.stats-strip) {
-            grid-template-columns: repeat(2, 1fr) !important;
-            gap: 16px !important;
-          }
-        }
-      `}</style>
     </div>
   );
 }

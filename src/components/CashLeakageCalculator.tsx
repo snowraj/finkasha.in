@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import styles from './CashLeakageCalculator.module.css';
 
 interface CalculatorProps {
   onOpenBookingWithDetails: (turnover: string, challenge: string) => void;
@@ -37,9 +38,8 @@ export default function CashLeakageCalculator({ onOpenBookingWithDetails }: Calc
     <div>
       <div
         id="diagnostic"
-        className="glass-card"
+        className={`glass-card ${styles.card}`}
         style={{
-          padding: '48px 40px',
           backgroundColor: '#ffffff',
           border: '2px solid #BFDBFE',
           boxShadow: '0 10px 35px rgba(0, 51, 102, 0.08)',
@@ -51,7 +51,7 @@ export default function CashLeakageCalculator({ onOpenBookingWithDetails }: Calc
           <div className="badge" style={{ marginBottom: '12px' }}>
             QUICK BUSINESS CASH FLOW CHECK
           </div>
-          <h3 style={{ fontSize: '2.1rem', marginBottom: '12px', color: '#003366' }}>
+          <h3 className={styles.title} style={{ marginBottom: '12px', color: '#003366' }}>
             Is Too Much Cash Getting Blocked In Your Business?
           </h3>
           <p style={{ color: '#475569', fontSize: '1rem', maxWidth: '680px', margin: '0 auto' }}>
@@ -59,21 +59,13 @@ export default function CashLeakageCalculator({ onOpenBookingWithDetails }: Calc
           </p>
         </div>
 
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: '1.1fr 1fr',
-            gap: '40px',
-            alignItems: 'center',
-          }}
-          className="calc-grid"
-        >
+        <div className={styles.grid}>
           {/* Sliders Input Column */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '26px' }}>
             {/* Turnover Slider */}
             <div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
-                <label style={{ fontSize: '0.92rem', fontWeight: 700, color: '#003366' }}>
+              <div className={styles.sliderHeader}>
+                <label htmlFor="annual-turnover" style={{ fontSize: '0.92rem', fontWeight: 700, color: '#003366' }}>
                   Annual Turnover
                 </label>
                 <span
@@ -88,6 +80,8 @@ export default function CashLeakageCalculator({ onOpenBookingWithDetails }: Calc
                 </span>
               </div>
               <input
+                id="annual-turnover"
+                className={styles.range}
                 type="range"
                 min="5"
                 max="100"
@@ -96,13 +90,12 @@ export default function CashLeakageCalculator({ onOpenBookingWithDetails }: Calc
                 onChange={(e) => setTurnoverCr(Number(e.target.value))}
                 style={{
                   width: '100%',
-                  height: '8px',
                   borderRadius: '4px',
                   accentColor: '#003366',
                   cursor: 'pointer',
                 }}
               />
-              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.78rem', color: '#64748B', marginTop: '4px' }}>
+              <div className={styles.rangeLabels}>
                 <span>₹5 Cr (Emerging)</span>
                 <span>₹25 Cr (Middle-Market)</span>
                 <span>₹50 Cr+ (Established)</span>
@@ -111,8 +104,8 @@ export default function CashLeakageCalculator({ onOpenBookingWithDetails }: Calc
 
             {/* DSO / Collection Period Slider */}
             <div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
-                <label style={{ fontSize: '0.92rem', fontWeight: 700, color: '#003366' }}>
+              <div className={styles.sliderHeader}>
+                <label htmlFor="customer-payment-time" style={{ fontSize: '0.92rem', fontWeight: 700, color: '#003366' }}>
                   Average Customer Payment Time
                 </label>
                 <span
@@ -127,6 +120,8 @@ export default function CashLeakageCalculator({ onOpenBookingWithDetails }: Calc
                 </span>
               </div>
               <input
+                id="customer-payment-time"
+                className={styles.range}
                 type="range"
                 min="30"
                 max="120"
@@ -135,13 +130,12 @@ export default function CashLeakageCalculator({ onOpenBookingWithDetails }: Calc
                 onChange={(e) => setDsoDays(Number(e.target.value))}
                 style={{
                   width: '100%',
-                  height: '8px',
                   borderRadius: '4px',
                   accentColor: dsoDays > 60 ? '#D97706' : '#003366',
                   cursor: 'pointer',
                 }}
               />
-              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.78rem', color: '#64748B', marginTop: '4px' }}>
+              <div className={styles.rangeLabels}>
                 <span>30 Days (Ideal)</span>
                 <span>60 Days (Typical)</span>
                 <span>90+ Days (Severe Trap)</span>
@@ -150,8 +144,8 @@ export default function CashLeakageCalculator({ onOpenBookingWithDetails }: Calc
 
             {/* Net Profit Margin Slider */}
             <div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
-                <label style={{ fontSize: '0.92rem', fontWeight: 700, color: '#003366' }}>
+              <div className={styles.sliderHeader}>
+                <label htmlFor="net-profit-margin" style={{ fontSize: '0.92rem', fontWeight: 700, color: '#003366' }}>
                   Approximate Net Profit Margin
                 </label>
                 <span
@@ -166,6 +160,8 @@ export default function CashLeakageCalculator({ onOpenBookingWithDetails }: Calc
                 </span>
               </div>
               <input
+                id="net-profit-margin"
+                className={styles.range}
                 type="range"
                 min="3"
                 max="25"
@@ -174,13 +170,12 @@ export default function CashLeakageCalculator({ onOpenBookingWithDetails }: Calc
                 onChange={(e) => setNetMargin(Number(e.target.value))}
                 style={{
                   width: '100%',
-                  height: '8px',
                   borderRadius: '4px',
                   accentColor: '#003366',
                   cursor: 'pointer',
                 }}
               />
-              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.78rem', color: '#64748B', marginTop: '4px' }}>
+              <div className={styles.rangeLabels}>
                 <span>3% (Thin)</span>
                 <span>10% (Healthy)</span>
                 <span>20%+ (High Margin)</span>
@@ -190,10 +185,10 @@ export default function CashLeakageCalculator({ onOpenBookingWithDetails }: Calc
 
           {/* Results Card */}
           <div
+            className={styles.snapshot}
             style={{
               background: 'linear-gradient(135deg, #002B54 0%, #001F3D 100%)',
               borderRadius: '14px',
-              padding: '32px',
               color: '#ffffff',
               boxShadow: '0 8px 24px rgba(0, 51, 102, 0.2)',
             }}
@@ -204,10 +199,8 @@ export default function CashLeakageCalculator({ onOpenBookingWithDetails }: Calc
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '24px' }}>
               <div
+                className={styles.snapshotRow}
                 style={{
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  alignItems: 'center',
                   padding: '12px 14px',
                   borderRadius: '8px',
                   background: 'rgba(255, 255, 255, 0.08)',
@@ -219,10 +212,8 @@ export default function CashLeakageCalculator({ onOpenBookingWithDetails }: Calc
               </div>
 
               <div
+                className={styles.snapshotRow}
                 style={{
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  alignItems: 'center',
                   padding: '12px 14px',
                   borderRadius: '8px',
                   background: 'rgba(255, 255, 255, 0.08)',
@@ -286,17 +277,6 @@ export default function CashLeakageCalculator({ onOpenBookingWithDetails }: Calc
           </div>
         </div>
 
-        <style jsx>{`
-          @media (max-width: 850px) {
-            :global(.calc-grid) {
-              grid-template-columns: 1fr !important;
-              gap: 28px !important;
-            }
-            :global(#diagnostic) {
-              padding: 30px 20px !important;
-            }
-          }
-        `}</style>
       </div>
 
       {/* Calculator Disclaimer */}

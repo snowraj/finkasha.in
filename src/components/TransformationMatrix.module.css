@@ -1,0 +1,36 @@
+.row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.4fr) minmax(0, 1.4fr);
+  padding: 20px 28px;
+}
+
+.row > * {
+  min-width: 0;
+}
+
+.header {
+  padding: 18px 28px;
+}
+
+.label {
+  display: none;
+  font-size: 0.78rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+@media (max-width: 850px) {
+  .row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+    padding: 18px 16px;
+  }
+
+  .header {
+    display: none;
+  }
+
+  .label {
+    display: block;
+  }
+}

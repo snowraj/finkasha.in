@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import styles from './Header.module.css';
 
 interface HeaderProps {
   onOpenBooking: () => void;
@@ -33,30 +34,23 @@ export default function Header({ onOpenBooking }: HeaderProps) {
         }}
       >
         <div
-          className="container"
-          style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            flexWrap: 'wrap',
-            gap: '8px',
-          }}
+          className={`container ${styles.utilityInner}`}
         >
-          <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+          <div className={styles.utilityIdentity}>
             <span>🏢 <strong>Finkasha Services Private Limited</strong></span>
-            <span style={{ color: '#93C5FD' }}>|</span>
-            <span style={{ color: '#93C5FD', fontWeight: 600 }}>Financial Management & CFO Advisory</span>
+            <span className={styles.utilitySeparator} style={{ color: '#93C5FD' }}>|</span>
+            <span className={styles.utilityAdvisory} style={{ color: '#93C5FD', fontWeight: 600 }}>Financial Management & CFO Advisory</span>
           </div>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+          <div className={styles.utilityContacts}>
             <a href="tel:+917477711173" style={{ color: '#E2E8F0', display: 'flex', alignItems: 'center', gap: '4px' }}>
               <span>📞 +91 74777 11173</span>
             </a>
-            <span style={{ color: '#64748B' }}>|</span>
+            <span className={styles.utilitySeparator} style={{ color: '#64748B' }}>|</span>
             <a href="tel:+919684704101" style={{ color: '#E2E8F0', display: 'flex', alignItems: 'center', gap: '4px' }}>
               <span>+91 96847 04101</span>
             </a>
-            <span style={{ color: '#64748B' }}>|</span>
+            <span className={styles.utilitySeparator} style={{ color: '#64748B' }}>|</span>
             <a href="mailto:office@finkasha.com" style={{ color: '#E2E8F0' }}>
               ✉️ office@finkasha.com
             </a>
@@ -66,6 +60,7 @@ export default function Header({ onOpenBooking }: HeaderProps) {
 
       {/* Main White Header */}
       <header
+        className={styles.header}
         style={{
           position: 'sticky',
           top: 0,
@@ -74,17 +69,15 @@ export default function Header({ onOpenBooking }: HeaderProps) {
           boxShadow: scrolled ? '0 4px 20px rgba(0, 51, 102, 0.1)' : '0 2px 10px rgba(0, 51, 102, 0.05)',
           borderBottom: '1px solid #E2E8F0',
           transition: 'all 0.3s ease',
-          padding: '14px 0',
         }}
       >
-        <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+        <div className={`container ${styles.mainInner}`}>
           {/* Brand Logo with finkasha.com typography & official logo */}
-          <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+          <Link href="/" className={styles.brand}>
             <div
+              className={styles.brandLogo}
               style={{
                 position: 'relative',
-                width: '46px',
-                height: '46px',
                 borderRadius: '8px',
                 overflow: 'hidden',
                 flexShrink: 0,
@@ -100,11 +93,11 @@ export default function Header({ onOpenBooking }: HeaderProps) {
                 priority
               />
             </div>
-            <div>
+            <div className={styles.brandCopy}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                 <span
+                  className={styles.brandName}
                   style={{
-                    fontSize: '1.45rem',
                     fontWeight: 800,
                     letterSpacing: '0.04em',
                     color: '#003366',
@@ -127,34 +120,33 @@ export default function Header({ onOpenBooking }: HeaderProps) {
                   .IN
                 </span>
               </div>
-              <div style={{ fontSize: '0.68rem', color: '#64748B', letterSpacing: '0.04em', fontWeight: 600 }}>
+              <div className={styles.brandTagline} style={{ color: '#64748B', letterSpacing: '0.04em', fontWeight: 600 }}>
                 VIRTUAL CFO & FINANCIAL MANAGEMENT
               </div>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav style={{ display: 'flex', alignItems: 'center', gap: '26px' }} className="desktop-nav">
-            <Link href="/#services" style={{ fontSize: '0.92rem', color: '#334155', fontWeight: 600 }} className="nav-link">
+          <nav className={styles.desktopNav} aria-label="Main navigation">
+            <Link href="/#services" style={{ fontSize: '0.92rem', fontWeight: 600 }} className={styles.navLink}>
               Services
             </Link>
-            <Link href="/#diagnostic" style={{ fontSize: '0.92rem', color: '#334155', fontWeight: 600 }} className="nav-link">
+            <Link href="/#diagnostic" style={{ fontSize: '0.92rem', fontWeight: 600 }} className={styles.navLink}>
               Financial Health Check
             </Link>
-            <Link href="/#transformation" style={{ fontSize: '0.92rem', color: '#334155', fontWeight: 600 }} className="nav-link">
+            <Link href="/#case-studies" style={{ fontSize: '0.92rem', fontWeight: 600 }} className={styles.navLink}>
               Case Studies
             </Link>
-            <Link href="/#faq" style={{ fontSize: '0.92rem', color: '#334155', fontWeight: 600 }} className="nav-link">
-              FAQs
+            <Link href="/#transformation" style={{ fontSize: '0.92rem', fontWeight: 600 }} className={styles.navLink}>
+              Financial Confusion
             </Link>
           </nav>
 
           {/* Action CTAs */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+          <div className={styles.actions}>
             <button
               onClick={onOpenBooking}
-              className="btn btn-primary btn-sm"
-              style={{ padding: '10px 22px' }}
+              className={`btn btn-primary btn-sm ${styles.bookingButton}`}
             >
               <span className="pulse-dot" style={{ width: '6px', height: '6px', backgroundColor: '#93C5FD' }}></span>
               <span>Explore 1 on 1 Executive Finance Session</span>
@@ -163,13 +155,10 @@ export default function Header({ onOpenBooking }: HeaderProps) {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              style={{
-                display: 'none',
-                padding: '8px',
-                color: '#003366',
-              }}
-              className="mobile-toggle"
+              className={styles.mobileToggle}
               aria-label="Toggle menu"
+              aria-expanded={mobileMenuOpen}
+              aria-controls="mobile-navigation"
             >
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 {mobileMenuOpen ? (
@@ -184,17 +173,7 @@ export default function Header({ onOpenBooking }: HeaderProps) {
 
         {/* Mobile Dropdown */}
         {mobileMenuOpen && (
-          <div
-            style={{
-              backgroundColor: '#ffffff',
-              borderTop: '1px solid #E2E8F0',
-              borderBottom: '1px solid #003366',
-              padding: '20px 24px',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '16px',
-            }}
-          >
+          <nav id="mobile-navigation" className={styles.mobileMenu} aria-label="Mobile navigation">
             <Link
               href="/#services"
               onClick={() => setMobileMenuOpen(false)}
@@ -210,18 +189,18 @@ export default function Header({ onOpenBooking }: HeaderProps) {
               Financial Health Check
             </Link>
             <Link
-              href="/#transformation"
+              href="/#case-studies"
               onClick={() => setMobileMenuOpen(false)}
               style={{ color: '#003366', fontSize: '1rem', fontWeight: 600 }}
             >
               Case Studies
             </Link>
             <Link
-              href="/#faq"
+              href="/#transformation"
               onClick={() => setMobileMenuOpen(false)}
               style={{ color: '#003366', fontSize: '1rem', fontWeight: 600 }}
             >
-              FAQs
+              Financial Confusion
             </Link>
             <button
               onClick={() => {
@@ -233,22 +212,9 @@ export default function Header({ onOpenBooking }: HeaderProps) {
             >
               Explore 1 on 1 Executive Finance Session
             </button>
-          </div>
+          </nav>
         )}
 
-        <style jsx>{`
-          .nav-link:hover {
-            color: #005bb5 !important;
-          }
-          @media (max-width: 900px) {
-            :global(.desktop-nav) {
-              display: none !important;
-            }
-            :global(.mobile-toggle) {
-              display: block !important;
-            }
-          }
-        `}</style>
       </header>
     </>
   );

@@ -66,7 +66,6 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
   position: relative;
 }
 
@@ -127,7 +126,23 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   letter-spacing: 0.01em;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  white-space: nowrap;
+  white-space: normal;
+  min-width: 0;
+  max-width: 100%;
+  min-height: 44px;
+  text-align: center;
+  line-height: 1.45;
+}
+
+.btn > span {
+  min-width: 0;
+}
+
+button:focus-visible,
+a:focus-visible,
+input[type='range']:focus-visible {
+  outline: 3px solid #007acc;
+  outline-offset: 3px;
 }
 
 .btn-primary {
@@ -194,6 +209,8 @@ h1, h2, h3, h4, h5, h6 {
   background: #e6f0fa;
   border: 1px solid #bfdbfe;
   color: #003366;
+  max-width: 100%;
+  min-width: 0;
 }
 
 .badge-gold {
@@ -209,6 +226,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #005bb5;
   box-shadow: 0 0 0 0 rgba(0, 91, 181, 0.7);
   animation: pulse 2s infinite cubic-bezier(0.66, 0, 0, 1);
+  flex-shrink: 0;
 }
 
 @keyframes pulse {
@@ -231,6 +249,7 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: var(--shadow-card);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
+  min-width: 0;
 }
 
 .glass-card:hover {
@@ -242,19 +261,19 @@ h1, h2, h3, h4, h5, h6 {
 /* Grids */
 .grid-2 {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 32px;
 }
 
 .grid-3 {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 28px;
 }
 
 .grid-4 {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 24px;
 }
 
@@ -379,6 +398,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
   transition: all 0.2s ease;
   color: #334155;
+  min-height: 44px;
 }
 
 .option-pill.active, .option-pill:hover {
@@ -415,10 +435,31 @@ h1, h2, h3, h4, h5, h6 {
   .section-subtitle {
     font-size: 1rem;
   }
+  .section-title-wrap {
+    margin-bottom: 32px;
+  }
+  .badge {
+    font-size: 0.72rem;
+    letter-spacing: 0.035em;
+    line-height: 1.5;
+  }
   .container {
     padding: 0 18px;
   }
   .modal-content {
     padding: 24px 18px;
+    max-height: calc(100dvh - 24px);
+    overscroll-behavior: contain;
+  }
+  .modal-overlay {
+    padding: 12px;
+  }
+  .form-input, .form-select, .form-textarea {
+    font-size: 1rem;
+  }
+  .footer-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
   }
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import styles from '../legal.module.css';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy | Finkasha Services Private Limited',
@@ -31,11 +32,11 @@ export default function PrivacyPage() {
 
         {/* Document Header Card */}
         <div
+          className={styles.card}
           style={{
             backgroundColor: '#ffffff',
             border: '1px solid #D9E4F0',
             borderRadius: '16px',
-            padding: '40px',
             boxShadow: '0 4px 20px rgba(0, 51, 102, 0.05)',
             marginBottom: '32px',
           }}
@@ -43,7 +44,7 @@ export default function PrivacyPage() {
           <div className="badge" style={{ marginBottom: '14px' }}>
             Data Protection & DPDP Act 2023 Compliance
           </div>
-          <h1 style={{ fontSize: '2.5rem', marginBottom: '14px', lineHeight: '1.2', color: '#003366' }}>
+          <h1 className={styles.title} style={{ marginBottom: '14px', lineHeight: '1.2', color: '#003366' }}>
             Privacy Policy & Enterprise Data Charter
           </h1>
           <p style={{ color: '#475569', fontSize: '1rem', lineHeight: '1.6' }}>
@@ -59,11 +60,11 @@ export default function PrivacyPage() {
 
         {/* Legal Text Content */}
         <div
+          className={styles.card}
           style={{
             backgroundColor: '#ffffff',
             border: '1px solid #D9E4F0',
             borderRadius: '16px',
-            padding: '40px',
             boxShadow: '0 4px 20px rgba(0, 51, 102, 0.05)',
             color: '#334155',
             fontSize: '0.96rem',

@@ -1,0 +1,38 @@
+.pageTitle {
+  font-size: 2.8rem;
+}
+
+.serviceCard {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 40px;
+  align-items: center;
+  padding: 40px;
+}
+
+.serviceCard > * {
+  min-width: 0;
+}
+
+.scopeCard {
+  padding: 28px;
+}
+
+@media (max-width: 900px) {
+  .serviceCard {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+    padding: 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .pageTitle {
+    font-size: 2rem;
+  }
+
+  .serviceCard,
+  .scopeCard {
+    padding: 24px 20px;
+  }
+}

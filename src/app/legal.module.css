@@ -1,0 +1,17 @@
+.card {
+  padding: 40px;
+}
+
+.title {
+  font-size: 2.5rem;
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding: 24px 20px;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+}

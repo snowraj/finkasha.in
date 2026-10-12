@@ -1,0 +1,108 @@
+.card {
+  padding: 48px 40px;
+}
+
+.title {
+  font-size: 2.1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 40px;
+  align-items: center;
+}
+
+.grid > * {
+  min-width: 0;
+}
+
+.sliderHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  margin-bottom: 8px;
+}
+
+.sliderHeader label {
+  flex: 1 1 170px;
+}
+
+.sliderHeader > span {
+  flex-shrink: 0;
+}
+
+.range {
+  height: 32px;
+  margin: 0;
+}
+
+.rangeLabels {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  font-size: 0.78rem;
+  color: #64748b;
+  margin-top: 4px;
+}
+
+.rangeLabels > :nth-child(2) {
+  text-align: center;
+}
+
+.rangeLabels > :last-child {
+  text-align: right;
+}
+
+.snapshot {
+  padding: 32px;
+  min-width: 0;
+}
+
+.snapshotRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+}
+
+.snapshotRow strong {
+  flex-shrink: 0;
+}
+
+@media (max-width: 850px) {
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+
+  .card {
+    padding: 30px 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding: 24px 20px;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .snapshot {
+    padding: 24px 18px;
+  }
+
+  .snapshotRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .snapshotRow strong {
+    font-size: 1.1rem;
+  }
+}
