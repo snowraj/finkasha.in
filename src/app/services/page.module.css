@@ -18,6 +18,25 @@
   padding: 28px;
 }
 
+.serviceArea {
+  min-width: 0;
+  line-height: 1.6;
+}
+
+.serviceArea strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #fff;
+}
+
+.sessionPrice {
+  margin-bottom: 14px;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: center;
+}
+
 @media (max-width: 900px) {
   .serviceCard {
     grid-template-columns: minmax(0, 1fr);

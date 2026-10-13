@@ -286,7 +286,51 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid-3" style={{ marginBottom: '32px' }}>
+          {/* Dedicated Highlight for Executive Finance Session */}
+          <div
+            id="executive-finance-session"
+            className={`glass-card ${styles.sessionCard}`}
+            style={{
+              border: '2px solid #005BB5',
+              background: '#F0F5FB',
+              marginBottom: '32px',
+            }}
+          >
+            <div>
+              <div className="badge" style={{ marginBottom: '10px', backgroundColor: '#003366', color: '#fff', borderColor: '#003366' }}>
+                1 ON 1 EXECUTIVE FINANCE SESSION
+              </div>
+              <h3 className={styles.sessionTitle} style={{ marginBottom: '10px', color: '#003366' }}>
+                Talk Through The Financial Decisions That Matter To Your Business
+              </h3>
+              <p style={{ color: '#475569', fontSize: '0.95rem', lineHeight: '1.6', marginBottom: '16px' }}>
+                A focused 60–90-minute discussion to understand your current financial concerns, where cash may be blocked, and what deserves your attention before making the next important business decision.
+              </p>
+              <div className={styles.sessionBenefits} style={{ fontSize: '0.85rem', color: '#0F172A', fontWeight: 600 }}>
+                <span>✓ 60–90-Minute 1 on 1 Session</span>
+                <span>✓ Clear Financial Areas To Focus On Next</span>
+                <span>✓ Confidential Discussion</span>
+              </div>
+            </div>
+
+            <div style={{ textAlign: 'center' }}>
+              <div style={{ fontSize: '0.85rem', color: '#003366', fontWeight: 700, marginBottom: '8px' }}>
+                START WITH A 1 ON 1 DISCUSSION
+              </div>
+              <button
+                onClick={() => openBooking('₹20 Cr - ₹50 Cr', 'Paid 1-on-1 Strategic Financial Consultation')}
+                className="btn btn-primary btn-lg"
+                style={{ width: '100%', padding: '16px 28px', whiteSpace: 'normal' }}
+              >
+                Book 1 on 1 Executive Finance Session →
+              </button>
+              <div style={{ fontSize: '1.25rem', fontWeight: 700, color: '#003366', marginTop: '16px' }}>
+                ₹2,000 + GST
+              </div>
+            </div>
+          </div>
+
+          <div className="grid-3">
             {/* Offering 1: Virtual CFO */}
             <div
               id="virtual-cfo"
@@ -456,48 +500,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Offering 4: Dedicated Highlight for Paid Consultancy */}
-          <div
-            id="executive-finance-session"
-            className={`glass-card ${styles.sessionCard}`}
-            style={{
-              border: '2px solid #005BB5',
-              background: '#F0F5FB',
-            }}
-          >
-            <div>
-              <div className="badge" style={{ marginBottom: '10px', backgroundColor: '#003366', color: '#fff', borderColor: '#003366' }}>
-                1 ON 1 EXECUTIVE FINANCE SESSION
-              </div>
-              <h3 className={styles.sessionTitle} style={{ marginBottom: '10px', color: '#003366' }}>
-                Talk Through The Financial Decisions That Matter To Your Business
-              </h3>
-              <p style={{ color: '#475569', fontSize: '0.95rem', lineHeight: '1.6', marginBottom: '16px' }}>
-                A focused 60–90-minute discussion to understand your current financial concerns, where cash may be blocked, and what deserves your attention before making the next important business decision.
-              </p>
-              <div className={styles.sessionBenefits} style={{ fontSize: '0.85rem', color: '#0F172A', fontWeight: 600 }}>
-                <span>✓ 60–90-Minute 1 on 1 Session</span>
-                <span>✓ Clear Financial Areas To Focus On Next</span>
-                <span>✓ Confidential Discussion</span>
-              </div>
-            </div>
-
-            <div style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: '0.85rem', color: '#003366', fontWeight: 700, marginBottom: '8px' }}>
-                START WITH A 1 ON 1 DISCUSSION
-              </div>
-              <button
-                onClick={() => openBooking('₹20 Cr - ₹50 Cr', 'Paid 1-on-1 Strategic Financial Consultation')}
-                className="btn btn-primary btn-lg"
-                style={{ width: '100%', padding: '16px 28px', whiteSpace: 'normal' }}
-              >
-                Book 1 on 1 Executive Finance Session →
-              </button>
-              <div style={{ fontSize: '1.25rem', fontWeight: 700, color: '#003366', marginTop: '16px' }}>
-                ₹2,000 + GST
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
